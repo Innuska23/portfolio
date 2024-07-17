@@ -8,16 +8,10 @@ export const Main = () => {
     <StyledMain>
       <FlexContainer align={"center"} justify={"space-around"}>
         <div>
-          <MainTitle>Software Developer</MainTitle>
-          <Name>Hello, my name is Vahid Navazan</Name>
-          <span>
-            Short text with details about you, what you do or your professional
-            career. You can add more information on the about page.
-          </span>
-          <div>
-            <button>Projects</button>
-            <button>LinkedIn</button>
-          </div>
+          <StyledAbout>
+            Hi 👋, <br /> My name is <br />
+            <StyledName> Pavan MG</StyledName> <br />I build things for web
+          </StyledAbout>
         </div>
 
         <Photo src={photo} alt="" />
@@ -32,11 +26,24 @@ const StyledMain = styled.div`
 `;
 
 const Photo = styled.img`
-  width: 350px;
-  height: 430px;
+  border-radius: 230px;
+  width: 349px;
+  height: 349px;
   object-fit: cover;
 `;
 
-const MainTitle = styled.h1``;
+const StyledAbout = styled.h2`
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 121%;
+  letter-spacing: -0.02em;
+  color: #42446e;
+`;
 
-const Name = styled.h2``;
+const StyledName = styled.span`
+  background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+`;
