@@ -5,15 +5,11 @@ export const Menu = () => {
         <StyledMenu>
             <ul>
                 <li>
-                    <a href="">Home</a></li>
+                    <a href="">About</a></li>
                 <li>
-                    <a href="">Skills</a></li>
+                    <a href="">Projects</a></li>
                 <li>
-                    <a href="">Works</a></li>
-                <li>
-                    <a href="">Testimony</a></li>
-                <li>
-                    <a href="">Contact</a></li>
+                    <a href="">Contacts</a></li>
             </ul>
         </StyledMenu>
     )

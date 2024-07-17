@@ -1,9 +1,9 @@
-import { Icon } from "../icon/Icon"
+// import { Icon } from "../icon/Icon"
 
 export const Logo = () => {
     return (
         <a href="#">
-            <Icon iconId={'vsCodeSvg'} />
+            <span> Vahid Navazan</span>
         </a>
     )
 }
