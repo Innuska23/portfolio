@@ -1,25 +1,19 @@
 import styled from "styled-components"
 import { Icon } from "../icon/Icon"
 
-export const Menu = () => {
+export const Menu = (props: {
+    menuItems: Array<string>
+}) => {
     return (
         <StyledMenu>
             <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Tech Stack</a>
-                </li>
-                <li>
-                    <a href="">Projects</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                {props.menuItems.map((item, index) => {
+                    return <li key={index}>
+                        <a href="#">{item}</a>
+                    </li>
+                })}
+            </ul>
+            <div>
                 <li>
                     <a href="">
                         <Icon iconId={'githubSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
@@ -35,15 +29,22 @@ export const Menu = () => {
                         <Icon iconId={'linkedinSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
                     </a>
                 </li>
-            </ul>
+            </div>
 
         </StyledMenu>
     )
 }
 
 const StyledMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 30px;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+        ul {
+            display: flex;
+            gap: 30px;
+        }
+        div {
+            display: flex;
+        }
 `
