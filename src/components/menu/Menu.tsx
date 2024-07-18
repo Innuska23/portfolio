@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { Icon } from "../icon/Icon"
+import { SocialIcon } from "../socialIcon/SocialIcon"
+
 
 export const Menu = (props: {
     menuItems: Array<string>
@@ -14,21 +15,7 @@ export const Menu = (props: {
                 })}
             </ul>
             <div>
-                <li>
-                    <a href="">
-                        <Icon iconId={'githubSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'twitterSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'linkedinSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
-                    </a>
-                </li>
+                <SocialIcon />
             </div>
 
         </StyledMenu>
