@@ -1,6 +1,7 @@
 import './App.css';
 import { Header } from './layout/header/Header';
 import { About } from './layout/sections/about/About';
+import { Contact } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
 import { Projects } from './layout/sections/projects/Projects';
 import { Skills } from './layout/sections/skills/Skills';
@@ -14,6 +15,7 @@ function App() {
             <About />
             <Skills />
             <Projects />
+            <Contact />
         </div>
     );
 }

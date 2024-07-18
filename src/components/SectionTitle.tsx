@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-export const SectionTitle = styled.h2`
+type SectionTitlePropsType = {
+    font?: string
+}
+export const SectionTitle = styled.h2<SectionTitlePropsType>`
     font-weight: 700;
-    font-size: 48px;
+    font-size: ${props => props.font || '48px'};
     line-height: 54%;
     text-align: center;
     color: #42446e;
