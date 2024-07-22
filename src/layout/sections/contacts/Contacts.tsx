@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 import { SectionTitle } from "../../../components/SectionTitle"
 
 export const Contact = () => {
@@ -14,6 +15,8 @@ export const Contact = () => {
 
 
 const StyledContact = styled.section`
+    min-height: 100vh;
+    background-color: #abcacd;
 `
 
 const ContactText = styled.p`
