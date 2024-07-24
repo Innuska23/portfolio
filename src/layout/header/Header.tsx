@@ -22,5 +22,10 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-    background-color: #d4ffd3;
+    position: fixed;
+    padding: 41px 5px 0 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
 `

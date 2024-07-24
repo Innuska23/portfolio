@@ -8,13 +8,13 @@ export const Menu = (props: {
 }) => {
     return (
         <StyledMenu>
-            <ul>
+            <MenuList>
                 {props.menuItems.map((item, index) => {
-                    return <li key={index}>
-                        <a href="#">{item}</a>
-                    </li>
+                    return <MenuListItem key={index}>
+                        <MenuLink href="#">{item}</MenuLink>
+                    </MenuListItem>
                 })}
-            </ul>
+            </MenuList>
             <SocialIconContainer>
                 <SocialIcon />
             </SocialIconContainer>
@@ -26,28 +26,36 @@ export const Menu = (props: {
 const StyledMenu = styled.nav`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 25px;
     font-family: ${theme.font.secondFamily};
     font-weight: 500;
-    line-height: 130%;
-
-        ul {
-            display: flex;
-            gap: 50px;
-        }
-        div {
-            display: flex;
-        }
-
-        a {
-            font-size: 20px;
-            line-height: 130%;
-            text-align: center;
-            color: ${theme.colors.secondaryText}
-        }
+    line-height: 130%;    
 `
+const MenuList = styled.ul`
+    display: flex;
+    gap: 50px;
+`
+
+const MenuListItem = styled.li`
+    
+`
+const MenuLink = styled.a`
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+    color: ${theme.colors.secondaryText};
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: ${theme.colors.primaryText};
+    }
+`;
+
 const SocialIconContainer = styled.div`
     display: flex;
+    padding-top: 2px;
     gap: 20px;
     margin-left: 51px;
 `
