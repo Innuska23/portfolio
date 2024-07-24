@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Icon } from "../icon/Icon"
+import { theme } from "../../styles/Theme.styled"
 
 type ProjectTypeProps = {
     title: string
@@ -20,10 +21,12 @@ export const Project = (props: ProjectTypeProps) => {
                     {props.stack}</Stack>
                 <ButtonContainer>
                     <Link href={"#"}>
-                        <Icon iconId="linkChain" height="20" width="20" viewBox="0 0 20 20" />Live Preview
+                        <Icon iconId="linkChain" height="20" width="20" viewBox="0 0 20 20" />
+                        <IconSpan>Live Preview</IconSpan>
                     </Link>
                     <Link href={"#"}>
-                        <Icon iconId="githubFill" height="20" width="20" viewBox="0 0 20 20" />View Code
+                        <Icon iconId="githubFill" height="20" width="20" viewBox="0 0 20 20" />
+                        <IconSpan>View Code</IconSpan>
                     </Link>
                 </ButtonContainer>
             </BoxText>
@@ -36,8 +39,8 @@ const StyledProject = styled.div`
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
     border-radius: 20px;
-    width: 375px;
-    height: 570px;
+    max-width: 375px;
+    max-height: 570px;
     gap: 34px;
 `
 
@@ -56,37 +59,45 @@ const Link = styled.a`
     line-height: 162%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #000;
+    color: ${theme.colors.darkColor};
+    align-items: center;
 `
 const Title = styled.h3`
     font-weight: 500;
     font-size: 28px;
     line-height: 93%;
-    color: #000;
+    color: ${theme.colors.darkColor};
 `
 const Text = styled.p`
     font-weight: 300;
     font-size: 18px;
     line-height: 144%;
-    color: #666;
+    margin-top: 17px;
+    color: ${theme.colors.secondaryText};
 `
 const Stack = styled.p`
     font-weight: 300;
     font-size: 14px;
+    margin-top: 12px;
 `
 const StackBold = styled.span`
     font-weight: 400;
     font-size: 16px;
     line-height: 162%;
-    color: #42446e;
+    color: ${theme.colors.primaryText};
 `
 const ButtonContainer = styled.div`  
     display: flex;
     gap: 48px;
+    margin-top: 21px;
+    align-items: center
 `
 const BoxText = styled.div`
-padding-bottom: 25px;
-padding-top: 27px;
-padding-left: 30px;
-padding-right: 30px;
+    padding-bottom: 25px;
+    padding-top: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
+`
+const IconSpan = styled.span`
+    margin-left: 10px;
 `

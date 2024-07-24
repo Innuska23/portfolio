@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { SocialIcon } from "../socialIcon/SocialIcon"
+import { theme } from "../../styles/Theme.styled"
 
 
 export const Menu = (props: {
@@ -14,9 +15,9 @@ export const Menu = (props: {
                     </li>
                 })}
             </ul>
-            <div>
+            <SocialIconContainer>
                 <SocialIcon />
-            </div>
+            </SocialIconContainer>
 
         </StyledMenu>
     )
@@ -26,12 +27,27 @@ const StyledMenu = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: ${theme.font.secondFamily};
+    font-weight: 500;
+    line-height: 130%;
 
         ul {
             display: flex;
-            gap: 30px;
+            gap: 50px;
         }
         div {
             display: flex;
         }
+
+        a {
+            font-size: 20px;
+            line-height: 130%;
+            text-align: center;
+            color: ${theme.colors.secondaryText}
+        }
+`
+const SocialIconContainer = styled.div`
+    display: flex;
+    gap: 20px;
+    margin-left: 51px;
 `

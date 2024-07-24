@@ -1,7 +1,7 @@
 import { SectionTitle } from "../SectionTitle"
 import { PersonalInfo } from "../personalInfo/PersonalInfo";
 
-export const WorkExperience = () => {
+export const UserExperience = () => {
     return (
         <>
             <SectionTitle text="start">Work Experience</SectionTitle>

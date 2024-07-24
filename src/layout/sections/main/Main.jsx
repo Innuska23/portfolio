@@ -2,27 +2,35 @@ import styled from "styled-components";
 
 import photo from "../../../assets/images/photo.webp";
 import { FlexContainer } from "../../../components/FlexContainer";
+import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme.styled";
 
 export const Main = () => {
   return (
     <StyledMain>
-      <FlexContainer align={"center"} justify={"space-around"}>
-        <div>
-          <StyledAbout>
-            Hi 👋, <br /> My name is <br />
-            <StyledName> Pavan MG</StyledName> <br />I build things for web
-          </StyledAbout>
-        </div>
+      <Container>
+        <FlexContainer
+          align={"center"}
+          justify={"space-between"}
+          padding={"45px 0px 8px 0"}
+        >
+          <div>
+            <StyledAbout>
+              Hi 👋, <br /> My name is <br />
+              <StyledName> Inna Dmytrenko</StyledName> <br />I build things for
+              web
+            </StyledAbout>
+          </div>
 
-        <Photo src={photo} alt="" />
-      </FlexContainer>
+          <Photo src={photo} alt="" />
+        </FlexContainer>
+      </Container>
     </StyledMain>
   );
 };
 
 const StyledMain = styled.div`
-  min-height: 100vh;
-  background-color: #fff5e7;
+  margin-top: 220px;
 `;
 
 const Photo = styled.img`
@@ -37,11 +45,11 @@ const StyledAbout = styled.h2`
   font-size: 58px;
   line-height: 121%;
   letter-spacing: -0.02em;
-  color: #42446e;
+  color: ${theme.colors.primaryText};
 `;
 
 const StyledName = styled.span`
-  background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+  background: ${theme.colors.gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
