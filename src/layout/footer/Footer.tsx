@@ -30,9 +30,9 @@ export const Footer = () => {
                 <FlexContainer justify={'space-between'} align={"center"}>
                     <NavigationList>
                         {footerItems.map((item, index) => (
-                            <li key={index}>
-                                <a href="#/">{item}</a>
-                            </li>
+                            <NavigationFooterItem key={index}>
+                                <NavigationFooterLink href="#/">{item}</NavigationFooterLink>
+                            </NavigationFooterItem>
                         ))}
                     </NavigationList>
                     <Copyright>
@@ -94,5 +94,13 @@ const CopyrightSpan = styled.span`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `;
+
+const NavigationFooterItem = styled.li`
+    
+`
+
+const NavigationFooterLink = styled.a`
+    
+`
 
 export default Footer;

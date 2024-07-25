@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
-html,
+/* html,
 body,
 div,
 span,
@@ -96,7 +96,7 @@ video {
     border: 0;
     vertical-align: baseline;
     list-style: none;
-}
+} */
 
 body {
     margin: 0;
@@ -111,16 +111,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a,
+ul,
+li {
     text-decoration: none;
-}
-
-ul {
     list-style: none;
 }
 
 button {
     background-color: unset;
     border: none;
+    cursor: pointer;
 }
 `

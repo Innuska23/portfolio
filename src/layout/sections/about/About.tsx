@@ -26,7 +26,7 @@ const StyledAbout = styled.section`
 `
 
 const StyledAboutMeText = styled.p`
-    font-weight: 400;
+    font-weight: 400px;
     font-size: 18px;
     line-height: 144%;
     color: ${theme.colors.secondaryText};
@@ -49,7 +49,8 @@ const StyledAboutBox = styled.div`
     position: absolute;
     /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+    transform-origin: top left; */
     top: 0px;
     right: -200px;
     z-index: -1;
