@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { theme } from '../../styles/Theme.styled';
 
 
 type PersonalInfoPropsType = {
@@ -24,10 +25,10 @@ export const PersonalInfo: React.FC<PersonalInfoPropsType> = ({ title, badge, pl
         <PlaceName>{placeName}</PlaceName>
 
         {location && (
-          <>
+          <LocationWrapper>
             <Icon iconId="location" height="12px" width="12px" viewBox="0 0 12 12" />
             <span>{location}</span>
-          </>
+          </LocationWrapper>
         )}
       </PersonalSmallBox>
       <PersonalSmallBox>
@@ -74,7 +75,7 @@ const PersonalDetails = styled.div`
     font-size: 12px;
     line-height: 233%;
     letter-spacing: 0.08em;
-    color: #a7a7a7;
+    color: ${theme.colors.color};
 `;
 
 
@@ -107,3 +108,9 @@ const PersonalSmallBox = styled.div`
   align-items: center;
   gap: 8px;
 `
+const LocationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 40px; 
+`;

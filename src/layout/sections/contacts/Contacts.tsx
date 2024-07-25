@@ -8,7 +8,10 @@ export const Contact = () => {
     return (
         <StyledContact>
             <Container>
-                <SectionTitle font={"58px"}>For any questions please mail me:</SectionTitle>
+                <SectionTitle
+                    font={"58px"}
+                    color={"#1e0e62"}
+                >For any questions please mail me:</SectionTitle>
                 <ContactText>
                     <ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</ContactLink>
                 </ContactText>
@@ -20,7 +23,9 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
     margin-top: 184px;
-    /* padding: 16px 0; */
+    font-family: ${theme.font.secondFamily};
+    line-height: 121%;
+    letter-spacing: -0.02em;
 `
 
 const ContactText = styled.p`

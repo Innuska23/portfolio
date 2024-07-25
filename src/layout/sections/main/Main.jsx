@@ -63,8 +63,8 @@ const Photo = styled.img`
   width: 349px;
   height: 349px;
   object-fit: cover;
-  margin-bottom: -26px;
-  margin-right: 21px;
+  margin-bottom: -36px;
+  margin-right: 6px;
 `;
 
 const StyledAbout = styled.h2`

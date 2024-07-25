@@ -41,7 +41,6 @@ const StyledProject = styled.div`
     border-radius: 20px;
     max-width: 375px;
     max-height: 570px;
-    gap: 34px;
 `
 
 const Image = styled.img`

@@ -12,6 +12,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
+                <Wrapper></Wrapper>
                 <FlexContainer justify={'space-between'} align={"center"}>
                     <Icon iconId="logoFooter" height="59" width="97" viewBox="0 0 97 59" />
                     <SocialContactsItemList>
@@ -27,7 +28,10 @@ export const Footer = () => {
                     </SocialContactsItemList>
                 </FlexContainer>
 
-                <FlexContainer justify={'space-between'} align={"center"}>
+                <FlexContainer
+                    justify={'space-between'}
+                    align={"center"}
+                    marginTop={"91px"}>
                     <NavigationList>
                         {footerItems.map((item, index) => (
                             <NavigationFooterItem key={index}>
@@ -47,6 +51,24 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     margin-top: 200px;
+ `;
+
+const Wrapper = styled.div`
+    position: relative;
+    z-index: 0;
+    
+        &::after {
+            content: "";
+            width: 1194px; 
+            height: 2px;
+            opacity: 0.3;
+            background-color: #666666;
+    
+            position: absolute;
+            top: 103px;
+            right: 0px;
+            z-index: 2;
+        }
 `;
 
 
@@ -63,7 +85,7 @@ const SocialLink = styled.a`
     font-size: 18px;
     font-weight: 400;
     line-height: 144%;
-    color: ${theme.colors.secondaryText}
+    color: ${theme.colors.primaryText}
     `;
 
 
@@ -80,7 +102,7 @@ const NavigationList = styled.ul`
     font-size: 18px;
     line-height: 144%;
     a {
-    color: ${theme.colors.secondaryText}
+    color: ${theme.colors.primaryText}
     }
 `;
 
@@ -100,7 +122,7 @@ const NavigationFooterItem = styled.li`
 `
 
 const NavigationFooterLink = styled.a`
-    
+    color: ${theme.colors.primaryText};
 `
 
 export default Footer;
