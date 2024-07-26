@@ -102,6 +102,7 @@ body {
     margin: 0;
     background-color: ${theme.colors.primaryBg};
     padding-top: 41px;
+    line-height: 1.2;
     padding-bottom: 60px;
     color: ${theme.colors.secondaryText};
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -117,6 +118,7 @@ ul,
 li {
     text-decoration: none;
     list-style: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 button {

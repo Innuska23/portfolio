@@ -50,6 +50,7 @@ const MenuLink = styled.a`
 
     &:hover {
         color: ${theme.colors.primaryText};
+        text-decoration-line: overline;
     }
 `;
 

@@ -23,7 +23,7 @@ export const Footer = () => {
                             <SocialLink href="mailto:info@example.com">info@example.com</SocialLink>
                         </SocialContactsItem>
                         <SocialIconContainer>
-                            <SocialIcon />
+                            <SocialIcon color={"#42446E"} hoverColor={"#666"} />
                         </SocialIconContainer>
                     </SocialContactsItemList>
                 </FlexContainer>
@@ -51,7 +51,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     margin-top: 200px;
- `;
+`;
 
 const Wrapper = styled.div`
     position: relative;

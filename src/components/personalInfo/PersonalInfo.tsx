@@ -59,7 +59,8 @@ const InfoBadge = styled.span`
   text-align: center;
   color: #018c0f;
   border-radius: 100px;
-  width: 84px;
+  max-width: 84px;
+  width: 100%;
   height: 24px;
   background: #d7ffe0;
 `;

@@ -40,6 +40,7 @@ const StyledProject = styled.div`
     background: #fff;
     border-radius: 20px;
     max-width: 375px;
+    width: 100%;
     max-height: 570px;
 `
 
