@@ -32,16 +32,15 @@ export const Main = () => {
 };
 
 const StyledMain = styled.main`
-  margin-top: 220px;
-  /* position: relative; */
+  margin-top: 320px;
   display: flex;
 `;
-
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
+  /* overflow: hidden; */
 
-  &::before {
+  &::after {
     content: "";
     width: 628px;
     height: 628px;
@@ -55,6 +54,14 @@ const PhotoWrapper = styled.div`
     bottom: -100px;
     left: -200px;
     z-index: -1;
+
+    @media (max-width: 1399px) {
+      width: 450px;
+      height: 450px;
+      bottom: -50px;
+      left: -100px;
+      overflow: hidden;
+    }
   }
 `;
 

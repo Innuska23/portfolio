@@ -1,19 +1,27 @@
 import styled from "styled-components"
+
 import { SocialIcon } from "../socialIcon/SocialIcon"
 import { theme } from "../../styles/Theme.styled"
 
+interface MenuItem {
+    items: string;
+    href: string;
+}
 
-export const Menu = (props: {
-    menuItems: Array<string>
-}) => {
+interface MenuProps {
+    menuItems: MenuItem[];
+}
+
+
+export const Menu: React.FC<MenuProps> = ({ menuItems }) => {
     return (
         <StyledMenu>
             <MenuList>
-                {props.menuItems.map((item, index) => {
-                    return <MenuListItem key={index}>
-                        <MenuLink href="#">{item}</MenuLink>
+                {menuItems.map((item, index) => (
+                    <MenuListItem key={index}>
+                        <MenuLink href={item.href}>{item.items}</MenuLink>
                     </MenuListItem>
-                })}
+                ))}
             </MenuList>
             <SocialIconContainer>
                 <SocialIcon />

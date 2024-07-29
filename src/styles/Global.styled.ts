@@ -101,7 +101,7 @@ video {
 body {
     margin: 0;
     background-color: ${theme.colors.primaryBg};
-    padding-top: 41px;
+    padding: 41px 5px 0 5px;
     line-height: 1.2;
     padding-bottom: 60px;
     color: ${theme.colors.secondaryText};

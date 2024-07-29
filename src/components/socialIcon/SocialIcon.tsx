@@ -25,7 +25,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({ color, hoverColor }) => 
                     href=""
                     color={color}
                     hoverColor={hoverColor}>
-                    <Icon iconId={'twitterSvg'} width={"30"} height={"30"} viewBox={"0 0 30 30"} />
+                    <Icon iconId={'twitterSvg'} width={"30"} height={"31"} viewBox={"0 0 30 31"} />
                 </SocialLink>
             </SocialListItem>
             <SocialListItem>

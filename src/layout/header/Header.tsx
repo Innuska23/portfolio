@@ -5,7 +5,13 @@ import { Menu } from "../../components/menu/Menu"
 import { Container } from "../../components/Container"
 import { FlexContainer } from "../../components/FlexContainer"
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const menuItems = [
+    { items: "Home", href: "#" },
+    { items: "About", href: "#about" },
+    { items: "Tech Stack", href: "#tech-stack" },
+    { items: "Projects", href: "#projects" },
+    { items: "Contact", href: "#contact" }
+];
 
 
 export const Header = () => {
@@ -14,7 +20,7 @@ export const Header = () => {
             <Container>
                 <FlexContainer justify="space-between" align="center">
                     <Logo />
-                    <Menu menuItems={items} />
+                    <Menu menuItems={menuItems} />
                 </FlexContainer>
             </Container>
         </StyledHeader>
@@ -23,7 +29,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     position: fixed;
-    padding: 41px 5px 0 5px;
+    padding-top: 41px;
     top: 0;
     left: 0;
     right: 0;

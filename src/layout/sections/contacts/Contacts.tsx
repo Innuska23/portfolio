@@ -6,7 +6,7 @@ import { theme } from "../../../styles/Theme.styled"
 
 export const Contact = () => {
     return (
-        <StyledContact>
+        <StyledContact id='contact'>
             <Container>
                 <SectionTitle
                     font={"58px"}
