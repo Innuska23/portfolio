@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import photo from "../../../assets/images/photo.webp";
-import photoBg from "../../../assets/images/Abstract.png";
+import photoBg from "../../../assets/images/abstract.webp";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme.styled";
@@ -15,13 +15,11 @@ export const Main = () => {
           justify={"space-between"}
           padding={"45px 0px 8px 0"}
         >
-          <div>
-            <StyledAbout>
-              Hi 👋, <br /> My name is <br />
-              <StyledName> Inna Dmytrenko</StyledName> <br />I build things for
-              web
-            </StyledAbout>
-          </div>
+          <StyledAbout>
+            Hi 👋, <br /> My name is <br />
+            <StyledName> Inna Dmytrenko</StyledName> <br />I build things for
+            web
+          </StyledAbout>
           <PhotoWrapper>
             <Photo src={photo} alt="My photo" />
           </PhotoWrapper>
@@ -32,13 +30,27 @@ export const Main = () => {
 };
 
 const StyledMain = styled.main`
-  margin-top: 320px;
-  display: flex;
+  margin-top: 279px;
 `;
+
+const StyledAbout = styled.h2`
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 121%;
+  letter-spacing: -0.02em;
+  color: ${theme.colors.primaryText};
+`;
+
+const StyledName = styled.span`
+  background: ${theme.colors.gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`;
+
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
-  /* overflow: hidden; */
 
   &::after {
     content: "";
@@ -72,19 +84,4 @@ const Photo = styled.img`
   object-fit: cover;
   margin-bottom: -36px;
   margin-right: 6px;
-`;
-
-const StyledAbout = styled.h2`
-  font-weight: 700;
-  font-size: 58px;
-  line-height: 121%;
-  letter-spacing: -0.02em;
-  color: ${theme.colors.primaryText};
-`;
-
-const StyledName = styled.span`
-  background: ${theme.colors.gradient};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 `;

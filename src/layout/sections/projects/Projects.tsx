@@ -1,8 +1,10 @@
 import styled from "styled-components"
+
 import { SectionParagraph } from "../../../components/SectionParagraph"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { FlexContainer } from "../../../components/FlexContainer"
 import { Project } from "../../../components/Project/Project"
+import { Container } from "../../../components/Container"
 
 import prog1 from '../../../assets/images/proj-1.webp'
 import prog2 from '../../../assets/images/proj-2.webp'
@@ -10,13 +12,14 @@ import prog3 from '../../../assets/images/proj-3.webp'
 import prog4 from '../../../assets/images/proj-4.webp'
 import prog5 from '../../../assets/images/proj-5.webp'
 import prog6 from '../../../assets/images/proj-6.webp'
-import { Container } from "../../../components/Container"
 
 export const Projects = () => {
     return (
         <StyledProject id="projects">
             <Container>
-                <SectionTitle>Projects</SectionTitle>
+                <SectionTitle
+                    lineH={"54%"}
+                    font={"48px"}>Projects</SectionTitle>
                 <SectionParagraph marginTop={"49px"}>Things I’ve built so far</SectionParagraph>
                 <FlexContainer wrap="wrap" gap="34px" justify='center' marginTop={"110px"}>
                     <Project
@@ -56,5 +59,5 @@ export const Projects = () => {
 }
 
 const StyledProject = styled.section`
-    margin-top: 201px;
+    margin-top: 200px;
 `

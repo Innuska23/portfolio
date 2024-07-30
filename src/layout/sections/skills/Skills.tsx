@@ -10,7 +10,9 @@ export const Skills = () => {
     return (
         <StyledSkills id='tech-stack'>
             <Container>
-                <SectionTitle>My Tech Stack</SectionTitle>
+                <SectionTitle
+                    font={"48px"}
+                    lineH={"54%"}>My Tech Stack</SectionTitle>
                 <SectionParagraph marginTop={"47px"}>Technologies I’ve been working with recently</SectionParagraph>
                 <FlexContainer wrap={"wrap"} marginTop={"126px"}>
                     <Skill />

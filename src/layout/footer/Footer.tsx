@@ -5,8 +5,15 @@ import { FlexContainer } from "../../components/FlexContainer";
 import { SocialIcon } from "../../components/socialIcon/SocialIcon";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme.styled";
+// import { Logo } from "../../components/logo/Logo";
 
-const footerItems = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+const footerItems = [
+    { items: "Home", href: "/" },
+    { items: "About", href: "#about" },
+    { items: "Tech Stack", href: "#tech-stack" },
+    { items: "Projects", href: "#projects" },
+    { items: "Contact", href: "#contact" }
+];
 
 export const Footer = () => {
     return (
@@ -14,6 +21,7 @@ export const Footer = () => {
             <Container>
                 <Wrapper></Wrapper>
                 <FlexContainer justify={'space-between'} align={"center"}>
+                    {/* <Logo color={"#42446"} /> */}
                     <Icon iconId="logoFooter" height="59" width="97" viewBox="0 0 97 59" />
                     <SocialContactsItemList>
                         <SocialContactsItem>
@@ -35,7 +43,7 @@ export const Footer = () => {
                     <NavigationList>
                         {footerItems.map((item, index) => (
                             <NavigationFooterItem key={index}>
-                                <NavigationFooterLink href="#/">{item}</NavigationFooterLink>
+                                <NavigationFooterLink href={item.href}>{item.items}</NavigationFooterLink>
                             </NavigationFooterItem>
                         ))}
                     </NavigationList>
@@ -59,10 +67,10 @@ const Wrapper = styled.div`
     
         &::after {
             content: "";
-            width: 1194px; 
+            width: 100%; 
             height: 2px;
             opacity: 0.3;
-            background-color: #666666;
+            background-color: ${theme.colors.secondaryText};
     
             position: absolute;
             top: 103px;

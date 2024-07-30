@@ -13,16 +13,12 @@ export const UserExperience = () => {
                 location="Bengaluru"
                 date="Sep 2021 - Dec 2021" />
 
-            <SectionTitle text="start">Work Experience</SectionTitle>
-
             <PersonalInfo
                 placeName="Dr. Rajkumar's Learning App"
                 badge="Full Time"
                 title="Junior Web Developer"
                 location="Bengaluru"
                 date="Sep 2021 - Dec 2021" />
-
-            <SectionTitle text="start">Work Experience</SectionTitle>
 
             <PersonalInfo
                 placeName="Dr. Rajkumar's Learning App"

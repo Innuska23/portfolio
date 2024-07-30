@@ -11,6 +11,7 @@ export const Contact = () => {
                 <SectionTitle
                     font={"58px"}
                     color={"#1e0e62"}
+                    letSps={"-0.02em"}
                 >For any questions please mail me:</SectionTitle>
                 <ContactText>
                     <ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</ContactLink>

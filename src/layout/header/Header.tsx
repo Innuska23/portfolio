@@ -6,7 +6,7 @@ import { Container } from "../../components/Container"
 import { FlexContainer } from "../../components/FlexContainer"
 
 const menuItems = [
-    { items: "Home", href: "#" },
+    { items: "Home", href: "/" },
     { items: "About", href: "#about" },
     { items: "Tech Stack", href: "#tech-stack" },
     { items: "Projects", href: "#projects" },

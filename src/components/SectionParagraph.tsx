@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { theme } from "../styles/Theme.styled";
 
 type SectionParagraphPropsType = {

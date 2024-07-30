@@ -1,17 +1,18 @@
 import styled from "styled-components"
+
 import { Icon } from "../icon/Icon"
 
 export const Skill = () => {
     return (
         <StyledSkill>
             <Icon iconId={"htmlSvg"} height={"120"} width={"120"} viewBox={"0 0 120 120"} />
-            <Icon iconId={"cssSvg"} height={"120"} width={"120"} viewBox={"0 0 120 120"} />
+            <Icon iconId={"cssSvg"} height={"119"} width={"120"} viewBox={"0 0 120 119"} />
             <Icon iconId={"jsSvg"} height={"120"} width={"120"} viewBox={"0 0 120 120"} />
-            <Icon iconId={"reactSvg"} height={"101"} width={"113"} viewBox={"0 0 101 113"} />
-            <Icon iconId={"reduxSvg"} height={"105"} width={"100"} viewBox={"0 0 105 100"} />
-            <Icon iconId={"bootstrapSvg"} height={"87"} width={"88"} viewBox={"0 0 87 88"} />
+            <Icon iconId={"reactSvg"} height={"101"} width={"113"} viewBox={"0 0 113 101"} />
+            <Icon iconId={"reduxSvg"} height={"100"} width={"105"} viewBox={"0 0 105 100"} />
+            <Icon iconId={"bootstrapSvg"} height={"87"} width={"88"} viewBox={"0 0 88 87"} />
             <Icon iconId={"tailwindSvg"} height={"131"} width={"131"} viewBox={"0 0 131 131"} />
-            <Icon iconId={"sassSvg"} height={"87"} width={"117"} viewBox={"0 0 87 117"} />
+            <Icon iconId={"sassSvg"} height={"87"} width={"117"} viewBox={"0 0 117 87"} />
             <Icon iconId={"gitSvg"} height={"105"} width={"105"} viewBox={"0 0 105 105"} />
             <Icon iconId={"greensockSvg"} height={"120"} width={"120"} viewBox={"0 0 120 120"} />
             <Icon iconId={"vscodeSvg"} height={"112"} width={"112"} viewBox={"0 0 112 112"} />

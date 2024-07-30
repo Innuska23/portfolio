@@ -4,7 +4,7 @@ export const theme = {
         secondaryBg: "#191919",
         primaryText: "#42446e",
         secondaryText: "#666",
-        color: "#a7a7a7",
+        darkGray: "#a7a7a7",
         darkColor: "#000",
         mailColor: "#1e0e62",
         badgeColor: "#018c0f",

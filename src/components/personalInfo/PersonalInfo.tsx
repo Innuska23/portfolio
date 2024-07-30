@@ -40,6 +40,27 @@ export const PersonalInfo: React.FC<PersonalInfoPropsType> = ({ title, badge, pl
   </PersonalItem>
 );
 
+
+const PersonalItem = styled.div`
+  max-width: 710px;
+  padding: 0 8px;
+  position: relative;
+  z-index: 0;
+    div {
+    display: flex;
+}
+
+&::after {
+    content: "";
+    display: inline-block;
+    width: 696px;
+    height: 2px;
+    z-index: -1;
+    border: 1px solid #ebeaed;
+  }
+  
+`;
+
 const PersonalBoxContainer = styled.div`
   align-items: baseline;
   justify-content: space-between;
@@ -50,7 +71,7 @@ const InfoTitle = styled.h3`
   font-size: 20px;
   line-height: 140%;
   letter-spacing: 0.05em;
-  color: #666;
+  color: ${theme.colors.secondaryText};
 `;
 
 const InfoBadge = styled.span`
@@ -77,32 +98,7 @@ const PersonalDetails = styled.div`
     font-size: 12px;
     line-height: 233%;
     letter-spacing: 0.08em;
-    color: ${theme.colors.color};
-`;
-
-
-const PersonalItem = styled.div`
-  max-width: 710px;
-  position: relative;
-  z-index: 0;
-    div {
-    display: flex;
-}
-
-&::after {
-    content: "";
-    display: inline-block;
-    /* margin-bottom: 24px; */
-    width: 696px;
-    height: 2px;
-    z-index: -1;
-    border: 1px solid #ebeaed;
-  }
-  
-`;
-
-const PlaceName = styled.span`
-    font-weight: bold;
+    color: ${theme.colors.darkGray};
 `;
 
 const PersonalSmallBox = styled.div`
@@ -110,6 +106,11 @@ const PersonalSmallBox = styled.div`
   align-items: center;
   gap: 8px;
 `
+
+const PlaceName = styled.span`
+    font-weight: 500;
+`;
+
 const LocationWrapper = styled.div`
   display: flex;
   align-items: center;

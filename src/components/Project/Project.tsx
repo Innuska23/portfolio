@@ -47,9 +47,49 @@ const StyledProject = styled.div`
 
 const Image = styled.img`
     border-radius: 20px 20px 0 0;
-    width: 375px;
-    height: 260px;
+    max-width: 375px;
+    max-height: 260px;
     object-fit: cover;
+`
+const BoxText = styled.div`
+    padding-bottom: 25px;
+    padding-top: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
+`
+
+const Title = styled.h3`
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 93%;
+    color: ${theme.colors.darkColor};
+`
+
+const Text = styled.p`
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 144%;
+    margin-top: 17px;
+    color: ${theme.colors.secondaryText};
+`
+
+const Stack = styled.p`
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 12px;
+`
+const StackBold = styled.span`
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: ${theme.colors.primaryText};
+`
+
+const ButtonContainer = styled.div`  
+    display: flex;
+    gap: 48px;
+    margin-top: 21px;
+    align-items: center
 `
 
 const Link = styled.a`
@@ -63,42 +103,7 @@ const Link = styled.a`
     color: ${theme.colors.darkColor};
     align-items: center;
 `
-const Title = styled.h3`
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 93%;
-    color: ${theme.colors.darkColor};
-`
-const Text = styled.p`
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 144%;
-    margin-top: 17px;
-    color: ${theme.colors.secondaryText};
-`
-const Stack = styled.p`
-    font-weight: 300;
-    font-size: 14px;
-    margin-top: 12px;
-`
-const StackBold = styled.span`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 162%;
-    color: ${theme.colors.primaryText};
-`
-const ButtonContainer = styled.div`  
-    display: flex;
-    gap: 48px;
-    margin-top: 21px;
-    align-items: center
-`
-const BoxText = styled.div`
-    padding-bottom: 25px;
-    padding-top: 27px;
-    padding-left: 30px;
-    padding-right: 30px;
-`
+
 const IconSpan = styled.span`
     margin-left: 10px;
 `
