@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import { Icon } from "../icon/Icon"
+import { theme } from "../../styles/Theme.styled"
 
 export const Skill = () => {
     return (
@@ -21,10 +22,46 @@ export const Skill = () => {
     )
 }
 
+// export const StyledSkill = styled.div`
+//     display: flex;
+//     gap: 105px;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     @media ${theme.media.mobile} {
+//         gap: 40px;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     @media ${theme.media.tablet} {
+//         gap: 75px;
+//     }
+// `
+
 export const StyledSkill = styled.div`
-    display: flex;
+    display: grid;
     gap: 105px;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
+    
+    @media ${theme.media.desktop} {
+        gap: 105px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (max-width: 1200px) {
+        gap: 105px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media ${theme.media.tablet} {
+        gap: 75px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media ${theme.media.mobile} {
+        gap: 40px;
+        grid-template-columns: 1fr;
+    }
 `

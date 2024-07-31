@@ -20,7 +20,7 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <Wrapper></Wrapper>
-                <FlexContainer justify={'space-between'} align={"center"}>
+                <FlexContainer justify={'space-between'} align={"center"} wrap={"wrap"}>
                     {/* <Logo color={"#42446"} /> */}
                     <Icon iconId="logoFooter" height="59" width="97" viewBox="0 0 97 59" />
                     <SocialContactsItemList>
@@ -106,6 +106,7 @@ const SocialIconContainer = styled.div`
 
 const NavigationList = styled.ul`
     display: flex;
+    flex-wrap: wrap;
     gap: 52px;
     font-family: ${theme.font.secondFamily};
     font-size: 18px;

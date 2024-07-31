@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../styles/Theme.styled";
 
 type FlexContainerPropsType = {
     direction?: string
@@ -20,4 +21,7 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
     padding: ${props => props.padding || '0'};
     margin-top: ${props => props.marginTop || '0px'};
     height: 100%;
+    @media ${theme.media.tablet} {
+        margin-top: 36px;
+    }
 `

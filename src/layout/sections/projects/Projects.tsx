@@ -20,7 +20,7 @@ export const Projects = () => {
                 <SectionTitle
                     lineH={"54%"}
                     font={"48px"}>Projects</SectionTitle>
-                <SectionParagraph marginTop={"49px"}>Things I’ve built so far</SectionParagraph>
+                <SectionParagraph>Things I’ve built so far</SectionParagraph>
                 <FlexContainer wrap="wrap" gap="34px" justify='center' marginTop={"110px"}>
                     <Project
                         title='Project Tile goes here'

@@ -5,6 +5,7 @@ import photoBg from "../../../assets/images/abstract.webp";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme.styled";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
@@ -14,6 +15,7 @@ export const Main = () => {
           align={"center"}
           justify={"space-between"}
           padding={"45px 0px 8px 0"}
+          wrap={"wrap"}
         >
           <StyledAbout>
             Hi 👋, <br /> My name is <br />
@@ -34,11 +36,12 @@ const StyledMain = styled.main`
 `;
 
 const StyledAbout = styled.h2`
-  font-weight: 700;
-  font-size: 58px;
-  line-height: 121%;
-  letter-spacing: -0.02em;
-  color: ${theme.colors.primaryText};
+  ${font({
+    weight: 700,
+    Fmax: 58,
+    Fmin: 36,
+    lineHeight: "121%",
+  })}
 `;
 
 const StyledName = styled.span`
@@ -51,6 +54,7 @@ const StyledName = styled.span`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
+  margin-top: 65px;
 
   &::after {
     content: "";
@@ -60,9 +64,6 @@ const PhotoWrapper = styled.div`
     background-repeat: no-repeat;
 
     position: absolute;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     bottom: -100px;
     left: -200px;
     z-index: -1;
@@ -84,4 +85,9 @@ const Photo = styled.img`
   object-fit: cover;
   margin-bottom: -36px;
   margin-right: 6px;
+
+  @media ${theme.media.mobile} {
+    width: 310px;
+    height: 310px;
+  }
 `;

@@ -5,6 +5,7 @@ import { SectionTitle } from "../../../components/SectionTitle"
 import { SectionParagraph } from "../../../components/SectionParagraph"
 import { Skill } from "../../../components/skill/Skill"
 import { Container } from "../../../components/Container"
+import { theme } from "../../../styles/Theme.styled"
 
 export const Skills = () => {
     return (
@@ -13,8 +14,12 @@ export const Skills = () => {
                 <SectionTitle
                     font={"48px"}
                     lineH={"54%"}>My Tech Stack</SectionTitle>
-                <SectionParagraph marginTop={"47px"}>Technologies I’ve been working with recently</SectionParagraph>
-                <FlexContainer wrap={"wrap"} marginTop={"126px"}>
+                <SectionParagraph>Technologies I’ve been working with recently</SectionParagraph>
+                <FlexContainer
+                    wrap={"wrap"}
+                    marginTop={"126px"}
+                    align={"center"}
+                    justify={"center"}>
                     <Skill />
                 </FlexContainer>
             </Container>
@@ -24,4 +29,7 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     margin-top: 200px;
+    @media ${theme.media.mobile} {
+    margin-top: 100px;
+    }
 `

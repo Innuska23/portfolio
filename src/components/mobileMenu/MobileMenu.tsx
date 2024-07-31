@@ -15,10 +15,10 @@ interface MenuProps {
 export const MobileMenu: React.FC<MenuProps> = ({ menuItems }) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <MenuList>
                     {menuItems.map((item, index) => (
                         <MenuListItem key={index}>
@@ -43,15 +43,15 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     width: 200px;
     height: 200px;
-    top: -100px;
-    right: -100px;
+    top: -80px;
+    right: -150px;
     z-index: 999999;
 
     span {
         display: block;
         width: 36px;
         height: 2px;
-        background-color: ${theme.colors.primaryBg};
+        background-color: ${theme.colors.primaryText};
         position: absolute;
         bottom: 50px;
 
@@ -64,7 +64,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             display: block;
             width: 36px;
             height: 2px;
-            background-color: ${theme.colors.primaryBg};
+            background-color: ${theme.colors.primaryText};
             position: absolute;
             transform: translateY(-10px);
 
@@ -78,7 +78,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             display: block;
             width: 24px;
             height: 2px;
-            background-color: ${theme.colors.primaryBg};
+            background-color: ${theme.colors.primaryText};
             position: absolute;
             transform: translateY(10px);
 
