@@ -33,15 +33,22 @@ export const Menu: React.FC<MenuProps> = ({ menuItems }) => {
 
 const StyledMenu = styled.nav`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 25px;
     font-family: ${theme.font.secondFamily};
     font-weight: 500;
-    line-height: 130%;    
+    line-height: 130%; 
+
+    @media ${theme.media.tablet}  {
+        display: none;
+    }
+
 `
 const MenuList = styled.ul`
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
 `
 

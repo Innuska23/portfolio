@@ -5,21 +5,24 @@ import { SectionTitle } from "../../../components/SectionTitle"
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme.styled"
 import photoBg from '../../../assets/images/drawing.webp'
+import { FlexContainer } from "../../../components/FlexContainer"
 
 export const About = () => {
     return (
         <StyledAbout id="about">
             <Container>
-                <StyledAboutBox>
-                    <SectionTitle text={"start"}>About Me</SectionTitle>
-                    <StyledAboutMeText>
-                        The Generator App is an online tool that helps you to export ready-made
-                        templates ready to work as your future website. It helps you to combine slides,
-                        panels and other components and export it as a set of static files:
-                        HTML/CSS/JS.
-                    </StyledAboutMeText>
-                    <UserExperience />
-                </StyledAboutBox>
+                <FlexContainer wrap="wrap">
+                    <StyledAboutBox>
+                        <SectionTitle text={"start"}>About Me</SectionTitle>
+                        <StyledAboutMeText>
+                            The Generator App is an online tool that helps you to export ready-made
+                            templates ready to work as your future website. It helps you to combine slides,
+                            panels and other components and export it as a set of static files:
+                            HTML/CSS/JS.
+                        </StyledAboutMeText>
+                        <UserExperience />
+                    </StyledAboutBox>
+                </FlexContainer>
             </Container>
         </StyledAbout>
     )
@@ -36,6 +39,7 @@ const StyledAboutBox = styled.div`
     max-width: 710px;
     gap: 38px;
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     position: relative;
     z-index: 1;

@@ -39,7 +39,8 @@ export const Footer = () => {
                 <FlexContainer
                     justify={'space-between'}
                     align={"center"}
-                    marginTop={"91px"}>
+                    marginTop={"91px"}
+                    wrap={"wrap"}>
                     <NavigationList>
                         {footerItems.map((item, index) => (
                             <NavigationFooterItem key={index}>
