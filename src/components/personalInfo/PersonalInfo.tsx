@@ -49,6 +49,7 @@ const PersonalItem = styled.div`
   z-index: 0;
     div {
     display: flex;
+    /* gap: 30px; */
 }
 
 &::after {
@@ -65,6 +66,7 @@ const PersonalItem = styled.div`
 const PersonalBoxContainer = styled.div`
   align-items: baseline;
   justify-content: space-between;
+  align-items: flex-start;
 `;
 
 const InfoTitle = styled.h3`
@@ -110,7 +112,7 @@ const PersonalDetails = styled.div`
     max-width: 710px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     gap: 10px;
 
   @media ${theme.media.mobile}{
@@ -136,7 +138,7 @@ const LocationWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-left: 40px; 
+  /* margin-left: 40px;  */
 
   @media ${theme.media.mobile}{
     display: none;

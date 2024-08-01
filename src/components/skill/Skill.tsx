@@ -24,17 +24,12 @@ export const Skill = () => {
 
 export const StyledSkill = styled.div`
     display: grid;
-    gap: 105px;
+    gap: 81px 103px;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
     justify-items: center; 
     margin: 0 auto;
-    
-    @media ${theme.media.desktop} {
-        gap: 105px;
-        grid-template-columns: repeat(6, 1fr);
-    }
 
     @media (max-width: 1234px) {
         gap: 105px;
@@ -47,7 +42,7 @@ export const StyledSkill = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        gap: 40px;
+        gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
 `

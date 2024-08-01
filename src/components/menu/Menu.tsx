@@ -54,7 +54,8 @@ const MenuList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    @media (max-width: 850px) {
+    /* margin-top: 8px; */
+    @media (max-width: 900px) {
         gap: 25px;
     }
 `

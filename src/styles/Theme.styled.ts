@@ -11,7 +11,7 @@ export const theme = {
         gradient: "linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);",
     },
     font: {
-        secondFamily: "DM Sans"
+        secondFamily: "DM Sans",
     },
 
     media: {

@@ -14,7 +14,7 @@ export const Main = () => {
         <FlexContainer
           align={"center"}
           justify={"space-between"}
-          padding={"45px 0px 8px 0"}
+          padding={"45px 0 0 0"}
           wrap={"wrap"}
         >
           <StyledAbout>
@@ -32,7 +32,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.main`
-  margin-top: 279px;
+  margin-top: 255px;
 
   @media ${theme.media.mobile} {
     margin-top: 179px;
@@ -58,11 +58,6 @@ const StyledName = styled.span`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
-  margin-top: 65px;
-
-  @media ${theme.media.mobile} {
-    margin-top: 0px;
-  }
 
   &::after {
     content: "";
@@ -87,8 +82,8 @@ const Photo = styled.img`
   width: 349px;
   height: 349px;
   object-fit: cover;
-  margin-bottom: -36px;
-  margin-right: 6px;
+  margin-bottom: -20px;
+  margin-right: 18px;
 
   @media ${theme.media.mobile} {
     width: 310px;

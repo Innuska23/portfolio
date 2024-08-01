@@ -40,8 +40,9 @@ export const Footer = () => {
                 <FlexContainer
                     justify={'space-between'}
                     align={"center"}
-                    marginTop={"91px"}
-                    wrap={"wrap"}>
+                    marginTop={"89px"}
+                    wrap={"wrap"}
+                    padding={"0 15px"}>
                     <NavigationList>
                         {footerItems.map((item, index) => (
                             <NavigationFooterItem key={index}>
@@ -70,6 +71,12 @@ const StyledFooter = styled.footer`
 const Wrapper = styled.div`
     position: relative;
     z-index: 0;
+    padding-top: 23px;
+
+
+    @media ${theme.media.tablet} {
+        padding-top: 0px;
+    }
     
         &::after {
             content: "";
@@ -79,7 +86,7 @@ const Wrapper = styled.div`
             background-color: ${theme.colors.secondaryText};
     
             position: absolute;
-            top: 103px;
+            top: 120px;
             right: 0px;
             z-index: 2;
         }
@@ -88,7 +95,7 @@ const Wrapper = styled.div`
 
 const SocialContactsItemList = styled.ul`
     display: flex;
-    gap: 33px;
+    gap: 90px;
     align-items: center;
 
     @media ${theme.media.tablet}{
@@ -115,7 +122,7 @@ const SocialLink = styled.a`
 const SocialIconContainer = styled.div`
     display: flex;
     gap: 20px;
-    margin-left: 15px;
+    margin-right: 15px;
 
     @media ${theme.media.tablet}{
         align-items: center;
@@ -149,6 +156,7 @@ const Copyright = styled.small`
  ${font({
     Fmin: 12,
     Fmax: 18,
+    letterSpacing: "0em",
 })}
     @media ${theme.media.tablet} {
         text-align: center;  

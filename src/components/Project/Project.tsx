@@ -43,18 +43,16 @@ const StyledProject = styled.div`
     border-radius: 20px;
     max-width: 375px;
     flex-grow: 1;
-    /* width: 100%; */
+    letter-spacing: 0em;
 `
 
 const Image = styled.img`
     border-radius: 20px 20px 0 0;
     width: 100%;
-    /* max-width: 375px; */
-    /* max-height: 260px; */
     object-fit: cover;
 `
 const BoxText = styled.div`
-    padding: 27px 30px 25px 30px;
+    padding: 25px 30px;
 
     @media ${theme.media.mobile} {
         padding: 20px 25px;
@@ -67,7 +65,8 @@ const Title = styled.h3`
     Fmax: 28,
     Fmin: 20,
     lineHeight: "93%",
-    color: `${theme.colors.darkColor}`
+    color: `${theme.colors.darkColor}`,
+    letterSpacing: "0em",
 })}
 `
 
@@ -77,7 +76,8 @@ const Text = styled.p`
     Fmax: 18,
     Fmin: 14,
     lineHeight: "144%",
-    color: `${theme.colors.secondaryText}`
+    color: `${theme.colors.secondaryText}`,
+    letterSpacing: "0em",
 })}
     margin-top: 17px;
 
@@ -87,10 +87,11 @@ const Text = styled.p`
 `
 
 const Stack = styled.p`
- ${font({
+    ${font({
     weight: 300,
     Fmax: 14,
     Fmin: 14,
+    letterSpacing: "0em",
 })}
     margin-top: 12px;
 
@@ -99,18 +100,19 @@ const Stack = styled.p`
     }
 `
 const StackBold = styled.span`
- ${font({
+    ${font({
     weight: 400,
     Fmax: 16,
     Fmin: 14,
     lineHeight: "162%",
-    color: `${theme.colors.primaryText}`
+    color: `${theme.colors.primaryText}`,
+    letterSpacing: "0em",
 })}
 `
 
 const ButtonContainer = styled.div`  
     display: flex;
-    gap: 48px;
+    gap: 55px;
     margin-top: 21px;
     align-items: center;
 

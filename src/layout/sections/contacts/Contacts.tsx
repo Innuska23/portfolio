@@ -13,6 +13,7 @@ export const Contact = () => {
                     font={"58px"}
                     color={"#1e0e62"}
                     letSps={"-0.02em"}
+                    family={`${theme.font.secondFamily}`}
                 >For any questions please mail me:</SectionTitle>
                 <ContactText>
                     <ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</ContactLink>
@@ -29,8 +30,7 @@ ${font({
     lineHeight: "121%",
     letterSpacing: "-0.02em"
 })}
-    margin-top: 184px;
-
+    font-family: "DM SANS";
     @media ${theme.media.mobile} {
         margin-top: 100px;
     }
@@ -54,5 +54,9 @@ ${font({
 `
 
 const ContactLink = styled.a`
-    
+${font({
+    letterSpacing: "-0.02em",
+    weight: 700,
+    family: `${theme.font.secondFamily}`,
+})}
 `

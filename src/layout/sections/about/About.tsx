@@ -14,11 +14,13 @@ export const About = () => {
             <Container>
                 <FlexContainer wrap="wrap">
                     <StyledAboutBox>
-                        <SectionTitle text={"start"}>About Me</SectionTitle>
+                        <SectionTitle
+                            text={"start"}
+                            letSps={"0.0em"}>About Me</SectionTitle>
                         <StyledAboutMeText>
                             The Generator App is an online tool that helps you to export ready-made
                             templates ready to work as your future website. It helps you to combine slides,
-                            panels and other components and export it as a set of static files:
+                            panels and other components and export it as a set of static files: <br />
                             HTML/CSS/JS.
                         </StyledAboutMeText>
                         <UserExperience />
@@ -40,7 +42,7 @@ const StyledAboutBox = styled.div`
     gap: 38px;
     width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     flex-direction: column;
     position: relative;
     z-index: 1;
@@ -54,10 +56,11 @@ const StyledAboutBox = styled.div`
         height: 835px;
         background-image: url(${photoBg});
         background-repeat: no-repeat;
-        background-size: contain;
+        /* background-size: contain;
+        background-size: 100% 100%; */
         position: absolute;
-        top: 300px;
-        right: -830px;
+        top: 271px;
+        right: -928px;
         transform: translateY(-50%);
         z-index: -1;
         @media ${theme.media.tablet}{
@@ -72,6 +75,7 @@ const StyledAboutMeText = styled.p`
     Fmin: 14,
     Fmax: 18,
     lineHeight: "144%",
-    color: `${theme.colors.secondaryText}`
+    color: `${theme.colors.secondaryText}`,
+    letterSpacing: "0em"
 })}
 `
