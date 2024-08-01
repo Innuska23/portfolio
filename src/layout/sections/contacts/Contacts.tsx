@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme.styled"
+import { font } from "../../../styles/Common"
 
 export const Contact = () => {
     return (
@@ -23,18 +24,28 @@ export const Contact = () => {
 
 
 const StyledContact = styled.section`
+${font({
+    family: `${theme.font.secondFamily}`,
+    lineHeight: "121%",
+    letterSpacing: "-0.02em"
+})}
     margin-top: 184px;
-    font-family: ${theme.font.secondFamily};
-    line-height: 121%;
-    letter-spacing: -0.02em;
+
+    @media ${theme.media.mobile} {
+        margin-top: 100px;
+    }
 `
 
 const ContactText = styled.p`
-    font-weight: 700;
-    font-size: 58px;
-    line-height: 121%;
+${font({
+    weight: 700,
+    Fmax: 58,
+    Fmin: 30,
+    lineHeight: "121%",
+    letterSpacing: "-0.02em",
+})}
+
     margin-top: 9px;
-    letter-spacing: -0.02em;
     text-align: center;
     background: ${theme.colors.gradient};
     background-clip: text;

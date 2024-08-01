@@ -59,5 +59,4 @@ export const Projects = () => {
 }
 
 const StyledProject = styled.section`
-    margin-top: 200px;
 `

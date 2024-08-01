@@ -22,37 +22,23 @@ export const Skill = () => {
     )
 }
 
-// export const StyledSkill = styled.div`
-//     display: flex;
-//     gap: 105px;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-items: center;
-//     @media ${theme.media.mobile} {
-//         gap: 40px;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-//     @media ${theme.media.tablet} {
-//         gap: 75px;
-//     }
-// `
-
 export const StyledSkill = styled.div`
     display: grid;
     gap: 105px;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
+    justify-items: center; 
+    margin: 0 auto;
     
     @media ${theme.media.desktop} {
         gap: 105px;
         grid-template-columns: repeat(6, 1fr);
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1234px) {
         gap: 105px;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @media ${theme.media.tablet} {
@@ -62,6 +48,6 @@ export const StyledSkill = styled.div`
 
     @media ${theme.media.mobile} {
         gap: 40px;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 `

@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { Icon } from "../icon/Icon"
 import { theme } from "../../styles/Theme.styled"
+import { font } from "../../styles/Common"
 
 type ProjectTypeProps = {
     title: string
@@ -41,66 +42,95 @@ const StyledProject = styled.div`
     background: #fff;
     border-radius: 20px;
     max-width: 375px;
-    width: 100%;
-    max-height: 570px;
+    flex-grow: 1;
+    /* width: 100%; */
 `
 
 const Image = styled.img`
     border-radius: 20px 20px 0 0;
-    max-width: 375px;
-    max-height: 260px;
+    width: 100%;
+    /* max-width: 375px; */
+    /* max-height: 260px; */
     object-fit: cover;
 `
 const BoxText = styled.div`
-    padding-bottom: 25px;
-    padding-top: 27px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 27px 30px 25px 30px;
+
+    @media ${theme.media.mobile} {
+        padding: 20px 25px;
+    }
 `
 
 const Title = styled.h3`
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 93%;
-    color: ${theme.colors.darkColor};
+    ${font({
+    weight: 500,
+    Fmax: 28,
+    Fmin: 20,
+    lineHeight: "93%",
+    color: `${theme.colors.darkColor}`
+})}
 `
 
 const Text = styled.p`
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 144%;
+    ${font({
+    weight: 300,
+    Fmax: 18,
+    Fmin: 14,
+    lineHeight: "144%",
+    color: `${theme.colors.secondaryText}`
+})}
     margin-top: 17px;
-    color: ${theme.colors.secondaryText};
+
+    @media ${theme.media.mobile} {
+        margin-top: 15px;
+    }
 `
 
 const Stack = styled.p`
-    font-weight: 300;
-    font-size: 14px;
+ ${font({
+    weight: 300,
+    Fmax: 14,
+    Fmin: 14,
+})}
     margin-top: 12px;
+
+    @media ${theme.media.mobile} {
+        margin-top: 10px;
+    }
 `
 const StackBold = styled.span`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 162%;
-    color: ${theme.colors.primaryText};
+ ${font({
+    weight: 400,
+    Fmax: 16,
+    Fmin: 14,
+    lineHeight: "162%",
+    color: `${theme.colors.primaryText}`
+})}
 `
 
 const ButtonContainer = styled.div`  
     display: flex;
     gap: 48px;
     margin-top: 21px;
-    align-items: center
+    align-items: center;
+
+    @media ${theme.media.mobile} {
+        margin-top: 15px;
+    }
 `
 
 const Link = styled.a`
+${font({
+    weight: 400,
+    Fmax: 16,
+    Fmin: 14,
+    lineHeight: "162%",
+    color: `${theme.colors.darkColor}`
+})}
     display: flex;
     cursor: pointer;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 162%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: ${theme.colors.darkColor};
     align-items: center;
 `
 

@@ -6,6 +6,7 @@ import { Container } from "../../../components/Container"
 import { theme } from "../../../styles/Theme.styled"
 import photoBg from '../../../assets/images/drawing.webp'
 import { FlexContainer } from "../../../components/FlexContainer"
+import { font } from "../../../styles/Common"
 
 export const About = () => {
     return (
@@ -29,7 +30,6 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
-    margin-top: 200px;
     position: relative;
     overflow: hidden;
 `
@@ -38,11 +38,15 @@ const StyledAbout = styled.section`
 const StyledAboutBox = styled.div`
     max-width: 710px;
     gap: 38px;
+    width: 100%;
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
     position: relative;
     z-index: 1;
+    @media ${theme.media.mobile}{
+        gap: 15px;
+    }
 
     &::after {
         content: "";
@@ -56,24 +60,18 @@ const StyledAboutBox = styled.div`
         right: -830px;
         transform: translateY(-50%);
         z-index: -1;
-        
-        @media (max-width: 1200px) {
-            width: 600px;
-            height: 600px;
-            /* right: -100px; */
-        }
-        
-        @media (max-width: 768px) {
-            width: 400px;
-            height: 400px;
-            right: -50px;
+        @media ${theme.media.tablet}{
+            display: none;
         }
     }
 `
 
 const StyledAboutMeText = styled.p`
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 144%;
-    color: ${theme.colors.secondaryText};
+    ${font({
+    weight: 400,
+    Fmin: 14,
+    Fmax: 18,
+    lineHeight: "144%",
+    color: `${theme.colors.secondaryText}`
+})}
 `

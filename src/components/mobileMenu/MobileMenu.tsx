@@ -43,7 +43,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     width: 200px;
     height: 200px;
-    top: -80px;
+    top: -70px;
     right: -150px;
     z-index: 999999;
 

@@ -5,6 +5,7 @@ import { FlexContainer } from "../../components/FlexContainer";
 import { SocialIcon } from "../../components/socialIcon/SocialIcon";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme.styled";
+import { font } from "../../styles/Common";
 // import { Logo } from "../../components/logo/Logo";
 
 const footerItems = [
@@ -60,6 +61,10 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     margin-top: 200px;
+
+    @media ${theme.media.mobile} {
+        margin-top: 100px;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -85,16 +90,25 @@ const SocialContactsItemList = styled.ul`
     display: flex;
     gap: 33px;
     align-items: center;
+
+    @media ${theme.media.tablet}{
+        gap: 15px;
+        flex-direction: column; 
+        align-items: center;
+    }
 `;
 
 const SocialContactsItem = styled.li``;
 
 const SocialLink = styled.a`
-    font-family: ${theme.font.secondFamily};
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 144%;
-    color: ${theme.colors.primaryText}
+    ${font({
+    family: `${theme.font.secondFamily}`,
+    Fmin: 12,
+    Fmax: 18,
+    weight: 400,
+    lineHeight: "144%",
+    color: `${theme.colors.primaryText}`
+})}
     `;
 
 
@@ -102,22 +116,44 @@ const SocialIconContainer = styled.div`
     display: flex;
     gap: 20px;
     margin-left: 15px;
+
+    @media ${theme.media.tablet}{
+        align-items: center;
+    }
 `
 
 const NavigationList = styled.ul`
+    ${font({
+    family: `${theme.font.secondFamily}`,
+    Fmin: 12,
+    Fmax: 18,
+    lineHeight: "144%",
+})}
     display: flex;
     flex-wrap: wrap;
     gap: 52px;
-    font-family: ${theme.font.secondFamily};
-    font-size: 18px;
-    line-height: 144%;
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+    @media (max-width: 1234px) {
+        gap: 20px;
+    }
+
     a {
-    color: ${theme.colors.primaryText}
+        ${font({ color: `${theme.colors.primaryText}` })}
     }
 `;
 
 const Copyright = styled.small`
-    font-size: 18px;
+ ${font({
+    Fmin: 12,
+    Fmax: 18,
+})}
+    @media ${theme.media.tablet} {
+        text-align: center;  
+        width: 100%;
+    }
 `;
 
 const CopyrightSpan = styled.span`
@@ -132,7 +168,9 @@ const NavigationFooterItem = styled.li`
 `
 
 const NavigationFooterLink = styled.a`
-    color: ${theme.colors.primaryText};
+    ${font({
+    color: `${theme.colors.primaryText}`
+})}
 `
 
 export default Footer;

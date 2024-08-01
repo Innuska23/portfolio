@@ -22,6 +22,7 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
     margin-top: ${props => props.marginTop || '0px'};
     height: 100%;
     @media ${theme.media.tablet} {
-        margin-top: 36px;
+        margin-top: 50px;
+        gap: 30px;
     }
 `

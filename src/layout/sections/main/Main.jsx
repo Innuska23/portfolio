@@ -33,6 +33,10 @@ export const Main = () => {
 
 const StyledMain = styled.main`
   margin-top: 279px;
+
+  @media ${theme.media.mobile} {
+    margin-top: 179px;
+  }
 `;
 
 const StyledAbout = styled.h2`
@@ -56,6 +60,10 @@ const PhotoWrapper = styled.div`
   z-index: 0;
   margin-top: 65px;
 
+  @media ${theme.media.mobile} {
+    margin-top: 0px;
+  }
+
   &::after {
     content: "";
     width: 628px;
@@ -65,15 +73,11 @@ const PhotoWrapper = styled.div`
 
     position: absolute;
     bottom: -100px;
-    left: -200px;
+    left: -250px;
     z-index: -1;
 
-    @media (max-width: 1399px) {
-      width: 450px;
-      height: 450px;
-      bottom: -50px;
-      left: -100px;
-      overflow: hidden;
+    @media (max-width: 1234px) {
+      display: none;
     }
   }
 `;

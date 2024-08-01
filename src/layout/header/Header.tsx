@@ -5,6 +5,7 @@ import { Menu } from "../../components/menu/Menu"
 import { Container } from "../../components/Container"
 import { FlexContainer } from "../../components/FlexContainer"
 import { MobileMenu } from "../../components/mobileMenu/MobileMenu"
+import { theme } from "../../styles/Theme.styled"
 
 const menuItems = [
     { items: "Home", href: "/" },
@@ -31,9 +32,12 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     position: fixed;
-    padding-top: 41px;
+    padding: 41px 5px 0 5px;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99999;
+    @media ${theme.media.tablet} {
+        padding-top: 0;
+    }
 `
