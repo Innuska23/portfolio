@@ -53,13 +53,11 @@ const StyledAboutBox = styled.div`
     &::after {
         content: "";
         width: 835px;
-        height: 835px;
+        height: 905px;
         background-image: url(${photoBg});
         background-repeat: no-repeat;
-        /* background-size: contain;
-        background-size: 100% 100%; */
         position: absolute;
-        top: 271px;
+        top: 300px;
         right: -928px;
         transform: translateY(-50%);
         z-index: -1;

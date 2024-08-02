@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-import { Icon } from "../../components/icon/Icon";
 import { FlexContainer } from "../../components/FlexContainer";
 import { SocialIcon } from "../../components/socialIcon/SocialIcon";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme.styled";
 import { font } from "../../styles/Common";
-// import { Logo } from "../../components/logo/Logo";
+import { Logo } from "../../components/logo/Logo";
 
 const footerItems = [
     { items: "Home", href: "/" },
@@ -22,8 +21,7 @@ export const Footer = () => {
             <Container>
                 <Wrapper></Wrapper>
                 <FlexContainer justify={'space-between'} align={"center"} wrap={"wrap"}>
-                    {/* <Logo color={"#42446"} /> */}
-                    <Icon iconId="logoFooter" height="59" width="97" viewBox="0 0 97 59" />
+                    <Logo idLogo="logoFooter" />
                     <SocialContactsItemList>
                         <SocialContactsItem>
                             <SocialLink href="tel:+91 12345 09876">+91 12345 09876</SocialLink>

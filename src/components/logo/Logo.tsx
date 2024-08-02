@@ -1,16 +1,18 @@
 import React from 'react';
-import { Icon } from '../icon/Icon';
 import styled from 'styled-components';
+
+import { Icon } from '../icon/Icon';
 
 interface LogoProps {
     color?: string;
+    idLogo?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ color = 'currentColor' }) => {
+export const Logo: React.FC<LogoProps> = ({ color = 'currentColor', idLogo = 'logo' }) => {
     return (
         <StyledLogoLink href='/'>
             <Icon
-                iconId={'logo'}
+                iconId={idLogo}
                 width="97"
                 height="59"
                 viewBox="0 0 97 59"

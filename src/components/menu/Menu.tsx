@@ -13,7 +13,6 @@ interface MenuProps {
     menuItems: MenuItem[];
 }
 
-
 export const Menu: React.FC<MenuProps> = ({ menuItems }) => {
     return (
         <StyledMenu>
@@ -27,13 +26,12 @@ export const Menu: React.FC<MenuProps> = ({ menuItems }) => {
             <SocialIconContainer>
                 <SocialIcon />
             </SocialIconContainer>
-
         </StyledMenu>
     )
 }
 
 const StyledMenu = styled.nav`
-${font({
+    ${font({
     weight: 500,
     lineHeight: "130%",
     family: `${theme.font.secondFamily}`,
@@ -41,28 +39,33 @@ ${font({
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 8px;
+    align-items: center;
+    max-width: 790px;
+    width: 100%;
     padding-bottom: 25px;
 
-
-    @media ${theme.media.tablet}  {
+    @media ${theme.media.tablet} {
         display: none;
     }
-
 `
+
 const MenuList = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    /* margin-top: 8px; */
+    justify-content: space-between;
+    flex: 1;
+    max-width: 609px;
+    width: 100%;
+    margin-right: 51px;
+
     @media (max-width: 900px) {
+        justify-content: flex-start;
         gap: 25px;
     }
 `
 
-const MenuListItem = styled.li`
-    
-`
+const MenuListItem = styled.li``
+
 const MenuLink = styled.a`
     ${font({
     weight: 500,
@@ -82,9 +85,10 @@ const MenuLink = styled.a`
 
 const SocialIconContainer = styled.div`
     display: flex;
-    padding-top: 2px;
+    align-items: center;
     gap: 20px;
-    margin-left: 51px;
+    margin-right: 5px;
+
     @media (max-width: 850px) {
         gap: 10px;
     }
