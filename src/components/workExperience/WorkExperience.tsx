@@ -1,33 +1,48 @@
-import styled from "styled-components";
 import { SectionTitle } from "../SectionTitle"
 import { PersonalInfo } from "../personalInfo/PersonalInfo";
 
-export const UserExperience = () => {
+import { S } from "./WorkExperience_Styles"
+
+const personalDate = [
+    {
+        placeName: "Dr. Rajkumar's Learning App",
+        badge: "Full Time",
+        title: "Junior Web Developer",
+        location: "Bengaluru",
+        date: "Sep 2021 - Dec 2021"
+    },
+    {
+        placeName: "Dr. Rajkumar's Learning App",
+        badge: "Full Time",
+        title: "Junior Web Developer",
+        location: "Bengaluru",
+        date: "Sep 2021 - Dec 2021"
+    },
+    {
+        placeName: "Dr. Rajkumar's Learning App",
+        badge: "Full Time",
+        title: "Junior Web Developer",
+        location: "Bengaluru",
+        date: "Sep 2021 - Dec 2021"
+    }
+]
+
+export const UserExperience: React.FC = () => {
     return (
         <>
             <SectionTitle text="start">Work Experience</SectionTitle>
-            <PersonalInfoWrapper>
-                <PersonalInfo
-                    placeName="Dr. Rajkumar's Learning App"
-                    badge="Full Time"
-                    title="Junior Web Developer"
-                    location="Bengaluru"
-                    date="Sep 2021 - Dec 2021" />
+            <S.PersonalInfoWrapper>
+                {personalDate.map((date, index) => (
+                    <PersonalInfo
+                        key={index}
+                        placeName={date.placeName}
+                        badge={date.badge}
+                        title={date.title}
+                        location={date.location}
+                        date={date.date} />
 
-                <PersonalInfo
-                    placeName="Dr. Rajkumar's Learning App"
-                    badge="Full Time"
-                    title="Junior Web Developer"
-                    location="Bengaluru"
-                    date="Sep 2021 - Dec 2021" />
-
-                <PersonalInfo
-                    placeName="Dr. Rajkumar's Learning App"
-                    badge="Full Time"
-                    title="Junior Web Developer"
-                    location="Bengaluru"
-                    date="Sep 2021 - Dec 2021" />
-            </PersonalInfoWrapper>
+                ))}
+            </S.PersonalInfoWrapper>
 
             <SectionTitle text="start">Education</SectionTitle>
 
@@ -39,11 +54,3 @@ export const UserExperience = () => {
         </>
     )
 }
-
-
-const PersonalInfoWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-`
-

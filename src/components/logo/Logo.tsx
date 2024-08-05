@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { Icon } from '../icon/Icon';
+import { S } from "./Logo_Styles"
 
 interface LogoProps {
     color?: string;
@@ -10,7 +10,7 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ color = 'currentColor', idLogo = 'logo' }) => {
     return (
-        <StyledLogoLink href='/'>
+        <S.LogoLink href='/'>
             <Icon
                 iconId={idLogo}
                 width="97"
@@ -18,11 +18,7 @@ export const Logo: React.FC<LogoProps> = ({ color = 'currentColor', idLogo = 'lo
                 viewBox="0 0 97 59"
                 fill={color}
             />
-        </StyledLogoLink>
+        </S.LogoLink>
     );
 };
 
-const StyledLogoLink = styled.a`
-    display: inline-block;
-    text-decoration: none;
-`;

@@ -1,8 +1,7 @@
-import styled from "styled-components"
-
 import { Icon } from "../icon/Icon"
-import { theme } from "../../styles/Theme.styled"
-import { font } from "../../styles/Common"
+
+import { S } from "./Project_Styles"
+
 
 type ProjectTypeProps = {
     title: string
@@ -11,131 +10,28 @@ type ProjectTypeProps = {
     stack: string
 }
 
-export const Project = (props: ProjectTypeProps) => {
+export const Project: React.FC<ProjectTypeProps> = (props: ProjectTypeProps) => {
     return (
-        <StyledProject>
-            <Image alt="" src={props.src} />
-            <BoxText>
-                <Title>{props.title}</Title>
-                <Text>{props.text}</Text>
-                <Stack>
-                    <StackBold>Tech stack: </StackBold>
-                    {props.stack}</Stack>
-                <ButtonContainer>
-                    <Link href={"#"}>
+        <S.Project>
+            <S.Image alt="" src={props.src} />
+            <S.BoxText>
+                <S.Title>{props.title}</S.Title>
+                <S.Text>{props.text}</S.Text>
+                <S.Stack>
+                    <S.StackBold>Tech stack: </S.StackBold>
+                    {props.stack}</S.Stack>
+                <S.ButtonContainer>
+                    <S.Link href={"#"}>
                         <Icon iconId="linkChain" height="20" width="20" viewBox="0 0 20 20" />
-                        <IconSpan>Live Preview</IconSpan>
-                    </Link>
-                    <Link href={"#"}>
+                        <S.IconSpan>Live Preview</S.IconSpan>
+                    </S.Link>
+                    <S.Link href={"#"}>
                         <Icon iconId="githubFill" height="20" width="20" viewBox="0 0 20 20" />
-                        <IconSpan>View Code</IconSpan>
-                    </Link>
-                </ButtonContainer>
-            </BoxText>
+                        <S.IconSpan>View Code</S.IconSpan>
+                    </S.Link>
+                </S.ButtonContainer>
+            </S.BoxText>
 
-        </StyledProject>
+        </S.Project>
     )
 }
-
-const StyledProject = styled.div`
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
-    background: #fff;
-    border-radius: 20px;
-    max-width: 375px;
-    flex-grow: 1;
-    letter-spacing: 0em;
-`
-
-const Image = styled.img`
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    object-fit: cover;
-`
-const BoxText = styled.div`
-    padding: 25px 30px;
-
-    @media ${theme.media.mobile} {
-        padding: 20px 25px;
-    }
-`
-
-const Title = styled.h3`
-    ${font({
-    weight: 500,
-    Fmax: 28,
-    Fmin: 20,
-    lineHeight: "93%",
-    color: `${theme.colors.darkColor}`,
-    letterSpacing: "0em",
-})}
-`
-
-const Text = styled.p`
-    ${font({
-    weight: 300,
-    Fmax: 18,
-    Fmin: 14,
-    lineHeight: "144%",
-    color: `${theme.colors.secondaryText}`,
-    letterSpacing: "0em",
-})}
-    margin-top: 17px;
-
-    @media ${theme.media.mobile} {
-        margin-top: 15px;
-    }
-`
-
-const Stack = styled.p`
-    ${font({
-    weight: 300,
-    Fmax: 14,
-    Fmin: 14,
-    letterSpacing: "0em",
-})}
-    margin-top: 12px;
-
-    @media ${theme.media.mobile} {
-        margin-top: 10px;
-    }
-`
-const StackBold = styled.span`
-    ${font({
-    weight: 400,
-    Fmax: 16,
-    Fmin: 14,
-    lineHeight: "162%",
-    color: `${theme.colors.primaryText}`,
-    letterSpacing: "0em",
-})}
-`
-
-const ButtonContainer = styled.div`  
-    display: flex;
-    gap: 55px;
-    margin-top: 21px;
-    align-items: center;
-
-    @media ${theme.media.mobile} {
-        margin-top: 15px;
-    }
-`
-
-const Link = styled.a`
-${font({
-    weight: 400,
-    Fmax: 16,
-    Fmin: 14,
-    lineHeight: "162%",
-    color: `${theme.colors.darkColor}`
-})}
-    display: flex;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    align-items: center;
-`
-
-const IconSpan = styled.span`
-    margin-left: 10px;
-`
