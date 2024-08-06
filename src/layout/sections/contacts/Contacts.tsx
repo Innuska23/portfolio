@@ -9,7 +9,6 @@ export const Contact: React.FC = () => {
         <S.Contact id="contact">
             <Container>
                 <SectionTitle
-                    font={"58px"}
                     color={"#1e0e62"}
                     letSps={"-0.02em"}
                     family={`${theme.font.secondFamily}`}

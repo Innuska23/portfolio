@@ -11,7 +11,7 @@ const contactData = [
 ];
 
 const footerItems = [
-    { items: "Home", href: "/" },
+    { items: "Home", href: "home" },
     { items: "About", href: "about" },
     { items: "Tech Stack", href: "tech-stack" },
     { items: "Projects", href: "projects" },
@@ -41,13 +41,15 @@ export const Footer: React.FC = () => {
                 <FlexContainer
                     justify={'space-between'}
                     align={"center"}
-                    marginTop={"89px"}
                     wrap={"wrap"}
                     padding={"0 15px"}>
                     <S.NavigationList>
                         {footerItems.map((item, index) => (
                             <S.NavigationFooterItem key={index}>
-                                <S.NavigationFooterLink href={item.href}>{item.items}</S.NavigationFooterLink>
+                                <S.NavigationFooterLink
+                                    to={item.href}
+                                    smooth={true}
+                                    spy={true}>{item.items}</S.NavigationFooterLink>
                             </S.NavigationFooterItem>
                         ))}
                     </S.NavigationList>

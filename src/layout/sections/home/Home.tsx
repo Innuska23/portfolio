@@ -4,15 +4,15 @@ import photo from "../../../assets/images/photo.webp";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Container } from "../../../components/Container";
 
-import { S } from "./Main_Styles";
+import { S } from "./Home_Styles";
 
-export const Main: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <S.Main id="home">
       <Container>
         <FlexContainer
           align={"center"}
-          justify={"space-between"}
+          justify={"center"}
           padding={"45px 0 0 0"}
           wrap={"wrap"}
         >

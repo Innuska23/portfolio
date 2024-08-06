@@ -16,6 +16,7 @@ const ProjectsGrid = styled.div`
 @media ${theme.media.tablet} {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px 20px;
+    margin-top: 50px;
 }
 
 @media ${theme.media.mobile} {

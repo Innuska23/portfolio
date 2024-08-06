@@ -13,9 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
     background-color: ${theme.colors.primaryBg};
-    padding: 41px 5px 0 5px;
     line-height: 1.2;
-    padding-bottom: 60px;
     color: ${theme.colors.secondaryText};
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,8 +22,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.2;
     overflow-x: hidden;
-
-
     min-width: 320px;
 }
 
@@ -44,9 +40,9 @@ button {
 }
 
 section {
-    margin-top: 200px;
-    @media ${theme.media.mobile} {
-        margin-top: 100px;
+    padding: 100px 0;
+    @media ${theme.media.tablet} {
+        padding: 50px 0;
     }
 }
 `

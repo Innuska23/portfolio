@@ -4,11 +4,12 @@ import { font } from "../../../styles/Common";
 
 import photoBg from "../../../assets/images/abstract.webp";
 
-const Main = styled.main`
-    margin-top: 255px;
+const Main = styled.section`
+    padding: 200px 0 100px;
+    overflow: hidden;
 
-    @media ${theme.media.mobile} {
-        margin-top: 179px;
+    @media ${theme.media.tablet} {
+        padding: 100px 0 50px;
     }
 `;
 
@@ -19,6 +20,9 @@ const About = styled.h2`
     Fmin: 36,
     lineHeight: "121%",
 })}
+    @media (max-width: 900px) {
+        margin-bottom: 30px;
+    }
 `;
 
 const Name = styled.span`
@@ -34,29 +38,24 @@ const PhotoWrapper = styled.div`
 
     &::after {
     content: "";
-    width: 628px;
-    height: 628px;
+    min-width: 770px;
+    min-height: 770px;
     background-image: url(${photoBg});
     background-repeat: no-repeat;
 
     position: absolute;
-    bottom: -100px;
-    left: -250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
-
-    @media (max-width: 1234px) {
-        display: none;
-    }
 }
 `;
 
 const Photo = styled.img`
     border-radius: 230px;
-    width: 349px;
-    height: 349px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
-    margin-bottom: -20px;
-    margin-right: 18px;
 
     @media ${theme.media.mobile} {
         width: 310px;

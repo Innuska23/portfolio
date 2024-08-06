@@ -4,7 +4,7 @@ import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { About } from './layout/sections/about/About';
 import { Contact } from './layout/sections/contacts/Contacts';
-import { Main } from './layout/sections/main/Main';
+import { Home } from './layout/sections/home/Home';
 import { Projects } from './layout/sections/projects/Projects';
 import { Skills } from './layout/sections/skills/Skills';
 
@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <Main />
+            <Home />
             <About />
             <Skills />
             <Projects />

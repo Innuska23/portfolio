@@ -44,7 +44,7 @@ const Text = styled.p`
     color: `${theme.colors.secondaryText}`,
     letterSpacing: "0em",
 })}
-    margin-top: 17px;
+    margin-top: 18px;
 
     @media ${theme.media.mobile} {
         margin-top: 15px;

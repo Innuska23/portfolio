@@ -9,13 +9,12 @@ const PersonalItem = styled.div`
   z-index: 0;
   div {
     display: flex;
-    /* gap: 30px; */
   }
 
   &::after {
     content: "";
     display: inline-block;
-    max-width: 696px;
+    width: 696px;
     height: 2px;
     z-index: -1;
     border: 1px solid #ebeaed;
@@ -30,22 +29,22 @@ const PersonalBoxContainer = styled.div`
 
 const InfoTitle = styled.h3`
   ${font({
-    weight: 400,
-    Fmax: 20,
-    Fmin: 14,
-    lineHeight: "140%",
-    letterSpacing: "0.05em",
-    color: `${theme.colors.secondaryText}`,
+  weight: 400,
+  Fmax: 20,
+  Fmin: 14,
+  lineHeight: "140%",
+  letterSpacing: "0.05em",
+  color: `${theme.colors.secondaryText}`,
 })}
 `;
 
 const InfoBadge = styled.span`
   ${font({
-    weight: 600,
-    Fmax: 9,
-    Fmin: 6,
-    lineHeight: "289%",
-    color: "#018c0f",
+  weight: 600,
+  Fmax: 9,
+  Fmin: 6,
+  lineHeight: "289%",
+  color: "#018c0f",
 })}
 
   text-align: center;
@@ -59,12 +58,12 @@ const InfoBadge = styled.span`
 
 const PersonalDetails = styled.div`
   ${font({
-    weight: 500,
-    Fmax: 12,
-    Fmin: 8,
-    lineHeight: "233%",
-    letterSpacing: "0.08em",
-    color: `${theme.colors.darkGray}`,
+  weight: 500,
+  Fmax: 12,
+  Fmin: 8,
+  lineHeight: "233%",
+  letterSpacing: "0.08em",
+  color: `${theme.colors.darkGray}`,
 })}
 
   display: flex;
@@ -110,12 +109,12 @@ const LocationWrapper = styled.div`
 `;
 
 export const S = {
-    PersonalItem,
-    PersonalBoxContainer,
-    InfoTitle,
-    InfoBadge,
-    PersonalDetails,
-    PersonalSmallBox,
-    PlaceName,
-    LocationWrapper,
+  PersonalItem,
+  PersonalBoxContainer,
+  InfoTitle,
+  InfoBadge,
+  PersonalDetails,
+  PersonalSmallBox,
+  PlaceName,
+  LocationWrapper,
 };

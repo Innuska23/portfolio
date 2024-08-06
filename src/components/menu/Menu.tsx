@@ -21,7 +21,7 @@ export const Menu: React.FC = () => {
                         to={item.href}
                         smooth={true}
                         spy={true}
-                        offset={-150}
+                        offset={-50}
                     >
                         {item.items}
                     </S.MenuLink>

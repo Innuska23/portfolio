@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme.styled";
 import { font } from "../../styles/Common";
+import { Link } from "react-scroll";
 
 const Footer = styled.footer`
-    margin-top: 200px;
+    padding: 100px 0;
 
-    @media ${theme.media.mobile} {
-        margin-top: 100px;
+    @media ${theme.media.tablet} {
+        padding: 50px 0;
     }
 `;
 
@@ -86,6 +87,7 @@ const NavigationList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     gap: 52px;
+    margin-top: 90px;
 
     @media ${theme.media.tablet} {
         display: none;
@@ -105,9 +107,11 @@ const Copyright = styled.small`
     Fmax: 18,
     letterSpacing: "0em",
 })}
+    margin-top: 90px;
     @media ${theme.media.tablet} {
         text-align: center;  
         width: 100%;
+        margin-top: 50px;
     }
 `;
 
@@ -122,10 +126,16 @@ const NavigationFooterItem = styled.li`
     
 `
 
-const NavigationFooterLink = styled.a`
+const NavigationFooterLink = styled(Link)`
+    cursor: pointer;
     ${font({
     color: `${theme.colors.primaryText}`
 })}
+    :hover{
+    ${font({
+    color: `${theme.colors.secondaryText}`
+})}
+}
 `
 
 export const S = {

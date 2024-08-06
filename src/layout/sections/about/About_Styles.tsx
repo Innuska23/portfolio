@@ -7,6 +7,20 @@ import photoBg from '../../../assets/images/drawing.webp'
 const About = styled.section`
     position: relative;
     overflow: hidden;
+    &::after {
+        content: "";
+        min-width: 835px;
+        min-height: 905px;
+        background-image: url(${photoBg});
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        z-index: -1;
+        @media ${theme.media.tablet}{
+            display: none;
+        }
+    }
 `
 
 const AboutBox = styled.div`
@@ -22,21 +36,7 @@ const AboutBox = styled.div`
         gap: 15px;
     }
 
-    &::after {
-        content: "";
-        width: 835px;
-        height: 905px;
-        background-image: url(${photoBg});
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 300px;
-        right: -928px;
-        transform: translateY(-50%);
-        z-index: -1;
-        @media ${theme.media.tablet}{
-            display: none;
-        }
-    }
+
 `
 
 const AboutMeText = styled.p`

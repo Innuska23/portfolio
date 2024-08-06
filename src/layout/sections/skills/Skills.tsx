@@ -12,12 +12,10 @@ export const Skills: React.FC = () => {
         <S.Skills id='tech-stack'>
             <Container>
                 <SectionTitle
-                    font={"48px"}
                     lineH={"54%"}>My Tech Stack</SectionTitle>
                 <SectionParagraph>Technologies I’ve been working with recently</SectionParagraph>
                 <FlexContainer
                     wrap={"wrap"}
-                    marginTop={"126px"}
                     align={"center"}
                     justify={"center"}>
                     <Skill />

@@ -8,9 +8,9 @@ const MenuList = styled.ul`
     flex-wrap: wrap;
     justify-content: space-between;
     flex: 1;
-    max-width: 609px;
+    max-width: 610px;
     width: 100%;
-    margin-right: 51px;
+    margin-right: 50px;
 
     @media (max-width: 1200px) {
         margin-left: 15px;

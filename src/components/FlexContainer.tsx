@@ -19,10 +19,9 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
     flex-wrap: ${props => props.wrap || 'nowrap'};
     gap: ${props => props.gap || '0'};
     padding: ${props => props.padding || '0'};
-    margin-top: ${props => props.marginTop || '0px'};
+    /* margin-top: ${props => props.marginTop || '0px'}; */
     height: 100%;
     @media ${theme.media.tablet} {
-        margin-top: 50px;
         gap: 30px;
     }
 `
