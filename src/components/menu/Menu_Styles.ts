@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { font } from "../../../styles/Common";
-import { theme } from "../../../styles/Theme.styled";
+import { font } from "../../styles/Common";
+import { theme } from "../../styles/Theme.styled";
 import { Link } from "react-scroll";
 
 const MenuList = styled.ul`

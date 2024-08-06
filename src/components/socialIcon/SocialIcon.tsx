@@ -17,9 +17,9 @@ const socialIconsData = [
     },
     {
         iconId: 'twitterSvg',
-        width: '30',
-        height: '31',
-        viewBox: '0 0 30 31',
+        width: '32',
+        height: '32',
+        viewBox: '0 0 32 32',
         href: ''
     },
     {

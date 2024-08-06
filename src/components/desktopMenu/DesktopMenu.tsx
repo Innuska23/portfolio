@@ -1,5 +1,5 @@
 import { SocialIcon } from "../socialIcon/SocialIcon"
-import { Menu } from "../../layout/header/menu/Menu";
+import { Menu } from "../menu/Menu";
 
 import { S } from "./DesktopMenu_Styles";
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu } from "../../layout/header/menu/Menu";
+import { Menu } from "../menu/Menu";
 
 import { S } from "./MobileMenu_Styles";
 

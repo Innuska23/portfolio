@@ -58,6 +58,11 @@ const SocialLink = styled.a`
     lineHeight: "144%",
     color: `${theme.colors.primaryText}`
 })}
+
+    :hover{
+    color: ${theme.colors.secondaryText};
+    text-decoration: underline;
+    }
     `;
 
 
