@@ -3,19 +3,10 @@ import { Menu } from "../../layout/header/menu/Menu";
 
 import { S } from "./DesktopMenu_Styles";
 
-interface MenuItem {
-    items: string;
-    href: string;
-}
-
-interface MenuProps {
-    menuItems: MenuItem[];
-}
-
-export const DesktopMenu: React.FC<MenuProps> = ({ menuItems }) => {
+export const DesktopMenu: React.FC = () => {
     return (
         <S.DesktopMenu>
-            <Menu menuItems={menuItems} />
+            <Menu />
             <S.SocialIconContainer>
                 <SocialIcon />
             </S.SocialIconContainer>

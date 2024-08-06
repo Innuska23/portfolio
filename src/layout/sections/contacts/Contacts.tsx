@@ -6,7 +6,7 @@ import { S } from "./Contacts_Styles"
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contact id='contact'>
+        <S.Contact id="contact">
             <Container>
                 <SectionTitle
                     font={"58px"}

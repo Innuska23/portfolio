@@ -90,7 +90,7 @@ const Link = styled.a`
 ${font({
     weight: 400,
     Fmax: 16,
-    Fmin: 14,
+    Fmin: 12,
     lineHeight: "162%",
     color: `${theme.colors.darkColor}`
 })}

@@ -12,10 +12,10 @@ const contactData = [
 
 const footerItems = [
     { items: "Home", href: "/" },
-    { items: "About", href: "#about" },
-    { items: "Tech Stack", href: "#tech-stack" },
-    { items: "Projects", href: "#projects" },
-    { items: "Contact", href: "#contact" }
+    { items: "About", href: "about" },
+    { items: "Tech Stack", href: "tech-stack" },
+    { items: "Projects", href: "projects" },
+    { items: "Contact", href: "contact" }
 ];
 
 export const Footer: React.FC = () => {
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                     <S.SocialContactsItemList>
                         {contactData.map((contact, index) => (
                             <S.SocialContactsItem key={index}>
-                                <S.SocialLink href={contact.href}>{contact.text}</S.SocialLink>
+                                <S.SocialLink href={`#${contact.href}`}>{contact.text}</S.SocialLink>
                             </S.SocialContactsItem>
                         ))
                         }
