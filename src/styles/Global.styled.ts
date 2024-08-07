@@ -20,7 +20,6 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.2;
     overflow-x: hidden;
     min-width: 320px;
 }
@@ -41,6 +40,7 @@ button {
 
 section {
     padding: 100px 0;
+    background-color: ${theme.colors.primaryBg};
     @media ${theme.media.tablet} {
         padding: 50px 0;
     }

@@ -29,15 +29,21 @@ ${font({
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: ${theme.animations.transition};
+
+:hover {
+    transition: ${theme.animations.transition};
+    color: ${theme.colors.primaryText};
+}
 `
 
 const ContactLink = styled.a`
-${font({
+    ${font({
     letterSpacing: "-0.02em",
     weight: 700,
     family: `${theme.font.secondFamily}`,
 })}
-`
+`;
 
 export const S = {
     Contact,

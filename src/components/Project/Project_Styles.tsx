@@ -96,9 +96,15 @@ ${font({
 })}
     display: flex;
     cursor: pointer;
-    text-decoration: underline;
     text-decoration-skip-ink: none;
     align-items: center;
+    transition: ${theme.animations.transition};
+
+    :hover{
+        text-decoration: underline;
+        transition: ${theme.animations.transition};
+        color: ${theme.colors.primaryText};
+    }
 `
 
 const IconSpan = styled.span`

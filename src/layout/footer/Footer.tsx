@@ -1,13 +1,14 @@
 import { FlexContainer } from "../../components/FlexContainer";
 import { SocialIcon } from "../../components/socialIcon/SocialIcon";
 import { Container } from "../../components/Container";
+import { Logo } from "../../components/logo/Logo";
+import { Fade } from "react-awesome-reveal";
 
 import { S } from "./Footer_Styles"
-import { Logo } from "../../components/logo/Logo";
 
 const contactData = [
-    { href: "tel:+91 12345 09876", text: "+91 12345 09876" },
-    { href: "mailto:info@example.com", text: "info@example.com" }
+    { href: "tel:+380 66 156 7600", text: "+380 66 156 7600" },
+    { href: "mailto:inna.dmytrenko@ukr.net", text: "inna.dmytrenko@ukr.net" }
 ];
 
 const footerItems = [
@@ -54,8 +55,11 @@ export const Footer: React.FC = () => {
                         ))}
                     </S.NavigationList>
                     <S.Copyright>
-                        Designed and built by <S.CopyrightSpan>Pavan MG</S.CopyrightSpan> with{" "}
-                        <S.CopyrightSpan>Love</S.CopyrightSpan> & <S.CopyrightSpan>Coffee</S.CopyrightSpan>
+                        Designed and built by <S.CopyrightSpan>Inna Dmytrenko</S.CopyrightSpan> with{" "}
+                        <Fade>
+                            <S.CopyrightHeart>&#10084;&#65039;</S.CopyrightHeart>
+                        </Fade>
+                        & <S.CopyrightSpan>Coffee</S.CopyrightSpan>
                     </S.Copyright>
                 </FlexContainer>
             </Container>

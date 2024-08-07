@@ -11,6 +11,7 @@ const MenuList = styled.ul`
     max-width: 610px;
     width: 100%;
     margin-right: 50px;
+    transition: all 0.5s ease-out;
 
     @media (max-width: 1200px) {
         margin-left: 15px;
@@ -18,7 +19,7 @@ const MenuList = styled.ul`
 
     @media (max-width: 900px) {
         justify-content: flex-start;
-        gap: 25px;
+        gap: 10px;
         margin-right: 0px;
     }
 
@@ -26,7 +27,6 @@ const MenuList = styled.ul`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 25px;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -42,13 +42,13 @@ const MenuLink = styled(Link)`
     lineHeight: "130%",
     color: `${theme.colors.secondaryText}`,
     Fmax: 20,
-    Fmin: 12,
+    Fmin: 14,
 })}
     text-align: center;
-    transition: all 0.3s ease;
+    transition: ${theme.animations.transition};
     cursor: pointer;
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 5px;
 
 
     @media ${theme.media.tablet} {

@@ -5,7 +5,8 @@ import { font } from "../../../styles/Common"
 import photoBg from '../../../assets/images/drawing.webp'
 
 const About = styled.section`
-    position: relative;
+    position: relative !important;
+    z-index: 100 !important;
     overflow: hidden;
     &::after {
         content: "";

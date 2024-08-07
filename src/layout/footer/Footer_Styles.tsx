@@ -4,6 +4,9 @@ import { font } from "../../styles/Common";
 import { Link } from "react-scroll";
 
 const Footer = styled.footer`
+    position: relative;
+    z-index: 100;
+    background-color: ${theme.colors.primaryBg};
     padding: 100px 0;
 
     @media ${theme.media.tablet} {
@@ -59,10 +62,12 @@ const SocialLink = styled.a`
     lineHeight: "144%",
     color: `${theme.colors.primaryText}`
 })}
+    transition: ${theme.animations.transition};
 
     :hover{
     color: ${theme.colors.secondaryText};
     text-decoration: underline;
+    transition: ${theme.animations.transition};
     }
     `;
 
@@ -95,6 +100,9 @@ const NavigationList = styled.ul`
     @media (max-width: 1234px) {
         gap: 20px;
     }
+    @media (max-width: 900px) {
+        gap: 10px;
+    }
 
     a {
         ${font({ color: `${theme.colors.primaryText}` })}
@@ -108,33 +116,56 @@ const Copyright = styled.small`
     letterSpacing: "0em",
 })}
     margin-top: 90px;
+    display: flex;
+    gap: 2px;
     @media ${theme.media.tablet} {
-        text-align: center;  
+        text-align: center;
+        justify-content: center;  
         width: 100%;
         margin-top: 50px;
     }
 `;
 
+const CopyrightHeart = styled.span`
+display: inline-block;
+  animation: pulse 1.5s infinite;
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+`;
+
 const CopyrightSpan = styled.span`
-    background: ${theme.colors.gradient};
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+background: ${theme.colors.gradient};
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 `;
 
 const NavigationFooterItem = styled.li`
-    
-`
+
+    `
 
 const NavigationFooterLink = styled(Link)`
-    cursor: pointer;
+cursor: pointer;
     ${font({
     color: `${theme.colors.primaryText}`
-})}
+})
+    }
+transition: ${theme.animations.transition};
     :hover{
     ${font({
-    color: `${theme.colors.secondaryText}`
-})}
+        color: `${theme.colors.secondaryText}`
+    })
+    }
+    transition: ${theme.animations.transition};;
 }
 `
 
@@ -147,6 +178,7 @@ export const S = {
     SocialIconContainer,
     NavigationList,
     Copyright,
+    CopyrightHeart,
     CopyrightSpan,
     NavigationFooterItem,
     NavigationFooterLink
