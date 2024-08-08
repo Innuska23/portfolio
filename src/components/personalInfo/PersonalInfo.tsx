@@ -6,7 +6,7 @@ import { S } from "./PersonalInfo_Styles"
 
 type PersonalInfoPropsType = {
   title: string,
-  badge: string,
+  badge?: string,
   placeName: string,
   location?: string,
   date: string,

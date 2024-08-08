@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
                     family={`${theme.font.secondFamily}`}
                 >For any questions please mail me:</SectionTitle>
                 <S.ContactText>
-                    <S.ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</S.ContactLink>
+                    <S.ContactLink href="mailto:inna.dmytrenko.dev@gmail.com">inna.dmytrenko.dev@gmail.com</S.ContactLink>
                 </S.ContactText>
             </Container>
         </S.Contact >

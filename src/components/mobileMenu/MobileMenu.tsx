@@ -10,7 +10,10 @@ export const MobileMenu: React.FC = () => {
     }
     return (
         <S.MobileMenu>
-            <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
+            <S.BurgerButton
+                aria-label="Кнопка меню"
+                isOpen={menuIsOpen}
+                onClick={onBurgerBtnClick}>
                 <span></span>
             </S.BurgerButton>
 

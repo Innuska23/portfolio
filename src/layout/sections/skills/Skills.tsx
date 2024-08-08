@@ -13,7 +13,7 @@ export const Skills: React.FC = () => {
             <Container>
                 <SectionTitle
                     lineH={"54%"}>My Tech Stack</SectionTitle>
-                <SectionParagraph>Technologies I’ve been working with recently</SectionParagraph>
+                <SectionParagraph>Technologies I’m Proficient With</SectionParagraph>
                 <FlexContainer
                     wrap={"wrap"}
                     align={"center"}

@@ -11,6 +11,8 @@ ${font({
     font-family: "DM SANS";
     @media ${theme.media.mobile} {
         margin-top: 100px;
+        z-index: 1;
+        position: relative;
     }
 `
 

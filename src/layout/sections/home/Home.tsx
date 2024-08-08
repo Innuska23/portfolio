@@ -4,7 +4,6 @@ import { FlexContainer } from "../../../components/FlexContainer";
 import { Container } from "../../../components/Container";
 
 import Typewriter from 'typewriter-effect';
-import Tilt from 'react-parallax-tilt';
 
 import { S } from "./Home_Styles";
 
@@ -32,15 +31,9 @@ export const Home: React.FC = () => {
             />
             <S.Description>A Frontend Developer</S.Description>
           </S.About>
-          <Tilt
-            scale={1.1}
-            transitionSpeed={2500}
-            tiltMaxAngleX={0}
-            tiltMaxAngleY={0}>
-            <S.PhotoWrapper>
-              <S.Photo src={photo} alt="My photo" />
-            </S.PhotoWrapper>
-          </Tilt>
+          <S.PhotoWrapper>
+            <S.Photo src={photo} alt="My photo" />
+          </S.PhotoWrapper>
         </FlexContainer>
       </Container>
     </S.Main >

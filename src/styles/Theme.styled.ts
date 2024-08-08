@@ -21,6 +21,6 @@ export const theme = {
     },
 
     animations: {
-        transition: "all 0.3s ease",
+        transition: "all 0.3s ease-in-out",
     }
 }

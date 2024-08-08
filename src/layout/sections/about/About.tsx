@@ -16,10 +16,12 @@ export const About: React.FC = () => {
                             text={"start"}
                             letSps={"0.0em"}>About Me</SectionTitle>
                         <S.AboutMeText>
-                            The Generator App is an online tool that helps you to export ready-made
-                            templates ready to work as your future website. It helps you to combine slides,
-                            panels and other components and export it as a set of static files: <br />
-                            HTML/CSS/JS.
+                            I am an experienced Junior Full-stack Developer
+                            proficient in HTML, CSS, SASS, JavaScript, React,
+                            Node.js, mongoose and Express. With a focus on clean
+                            and modular coding practices, I am committed to
+                            delivering high-quality web solutions that meet user
+                            expectations and adhere to industry best practices
                         </S.AboutMeText>
                         <UserExperience />
                     </S.AboutBox>

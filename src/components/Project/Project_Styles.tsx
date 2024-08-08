@@ -9,7 +9,18 @@ const Project = styled.div`
     max-width: 375px;
     flex-grow: 1;
     letter-spacing: 0em;
+    transition: ${theme.animations.transition};
+    
+    &:hover {
+    transform: scale(1.1);
+    }
 `
+
+const ImageLink = styled.a`
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+`;
 
 const Image = styled.img`
     border-radius: 20px 20px 0 0;
@@ -113,6 +124,7 @@ const IconSpan = styled.span`
 
 export const S = {
     Project,
+    ImageLink,
     Image,
     BoxText,
     Title,

@@ -7,6 +7,7 @@ type IconPropsType = {
     height?: string
     viewBox?: string
     fill?: string
+    src?: string
 }
 
 export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {

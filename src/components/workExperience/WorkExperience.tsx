@@ -1,31 +1,9 @@
 import { SectionTitle } from "../SectionTitle"
+import { educationDate, personalDate } from "../data/data";
+
 import { PersonalInfo } from "../personalInfo/PersonalInfo";
 
 import { S } from "./WorkExperience_Styles"
-
-const personalDate = [
-    {
-        placeName: "Dr. Rajkumar's Learning App",
-        badge: "Full Time",
-        title: "Junior Web Developer",
-        location: "Bengaluru",
-        date: "Sep 2021 - Dec 2021"
-    },
-    {
-        placeName: "Dr. Rajkumar's Learning App",
-        badge: "Full Time",
-        title: "Junior Web Developer",
-        location: "Bengaluru",
-        date: "Sep 2021 - Dec 2021"
-    },
-    {
-        placeName: "Dr. Rajkumar's Learning App",
-        badge: "Full Time",
-        title: "Junior Web Developer",
-        location: "Bengaluru",
-        date: "Sep 2021 - Dec 2021"
-    }
-]
 
 export const UserExperience: React.FC = () => {
     return (
@@ -45,12 +23,15 @@ export const UserExperience: React.FC = () => {
             </S.PersonalInfoWrapper>
 
             <SectionTitle text="start">Education</SectionTitle>
+            {educationDate.map((education, index) => (
+                <PersonalInfo
+                    key={index}
+                    placeName={education.placeName}
+                    badge={education.badge}
+                    title={education.title}
+                    date={education.date} />
+            ))}
 
-            <PersonalInfo
-                placeName="Bangalore Instutute of Technology"
-                badge="Full Time"
-                title="Bachelor in Electronics & Communication"
-                date="Aug 2016 - Dec 2020" />
         </>
     )
 }

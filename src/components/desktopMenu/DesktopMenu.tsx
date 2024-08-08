@@ -1,4 +1,4 @@
-import { SocialIcon } from "../socialIcon/SocialIcon"
+import { SocialIcon } from "../socialIcon/SocialIcon";
 import { Menu } from "../menu/Menu";
 
 import { S } from "./DesktopMenu_Styles";
@@ -6,11 +6,12 @@ import { S } from "./DesktopMenu_Styles";
 export const DesktopMenu: React.FC = () => {
     return (
         <S.DesktopMenu>
-            <Menu />
+            <Menu aria-label="Main Menu" />
             <S.SocialIconContainer>
-                <SocialIcon />
+                <SocialIcon aria-label="Social Media Links" />
             </S.SocialIconContainer>
         </S.DesktopMenu>
-    )
-}
+    );
+};
+
 

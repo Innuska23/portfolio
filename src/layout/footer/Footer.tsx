@@ -4,37 +4,26 @@ import { Container } from "../../components/Container";
 import { Logo } from "../../components/logo/Logo";
 import { Fade } from "react-awesome-reveal";
 
+import { contactData, menuItems } from "../../components/data/data";
+
 import { S } from "./Footer_Styles"
-
-const contactData = [
-    { href: "tel:+380 66 156 7600", text: "+380 66 156 7600" },
-    { href: "mailto:inna.dmytrenko@ukr.net", text: "inna.dmytrenko@ukr.net" }
-];
-
-const footerItems = [
-    { items: "Home", href: "home" },
-    { items: "About", href: "about" },
-    { items: "Tech Stack", href: "tech-stack" },
-    { items: "Projects", href: "projects" },
-    { items: "Contact", href: "contact" }
-];
 
 export const Footer: React.FC = () => {
     return (
-        <S.Footer>
+        <S.Footer aria-label="Footer">
             <Container>
                 <S.Wrapper></S.Wrapper>
                 <FlexContainer justify={'space-between'} align={"center"} wrap={"wrap"}>
-                    <Logo idLogo="logoFooter" />
+                    <Logo />
                     <S.SocialContactsItemList>
                         {contactData.map((contact, index) => (
                             <S.SocialContactsItem key={index}>
-                                <S.SocialLink href={`#${contact.href}`}>{contact.text}</S.SocialLink>
+                                <S.SocialLink href={`#${contact.href}`} aria-label={`Contact via ${contact.text}`}>{contact.text}</S.SocialLink>
                             </S.SocialContactsItem>
                         ))
                         }
                         <S.SocialIconContainer>
-                            <SocialIcon color={"#42446E"} hoverColor={"#666"} />
+                            <SocialIcon color={"#42446E"} hoverColor={"#666"} aria-label="Social media links" />
                         </S.SocialIconContainer>
                     </S.SocialContactsItemList>
                 </FlexContainer>
@@ -44,20 +33,21 @@ export const Footer: React.FC = () => {
                     align={"center"}
                     wrap={"wrap"}
                     padding={"0 15px"}>
-                    <S.NavigationList>
-                        {footerItems.map((item, index) => (
+                    <S.NavigationList role="navigation" aria-label="Footer navigation">
+                        {menuItems.map((item, index) => (
                             <S.NavigationFooterItem key={index}>
                                 <S.NavigationFooterLink
                                     to={item.href}
                                     smooth={true}
-                                    spy={true}>{item.items}</S.NavigationFooterLink>
+                                    spy={true}
+                                    aria-label={`Navigate to ${item.items} section`}>{item.items}</S.NavigationFooterLink>
                             </S.NavigationFooterItem>
                         ))}
                     </S.NavigationList>
-                    <S.Copyright>
-                        Designed and built by <S.CopyrightSpan>Inna Dmytrenko</S.CopyrightSpan> with{" "}
+                    <S.Copyright aria-label="Copyright information">
+                        Developed by <S.CopyrightSpan>Inna Dmytrenko</S.CopyrightSpan> with{" "}
                         <Fade>
-                            <S.CopyrightHeart>&#10084;&#65039;</S.CopyrightHeart>
+                            <S.CopyrightHeart aria-label="Heart symbol">&#10084;&#65039;</S.CopyrightHeart>
                         </Fade>
                         & <S.CopyrightSpan>Coffee</S.CopyrightSpan>
                     </S.Copyright>

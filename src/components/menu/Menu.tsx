@@ -1,19 +1,12 @@
 import React from "react";
 
+import { menuItems } from "../data/data";
+
 import { S } from "./Menu_Styles";
 
-const menuItems = [
-    { items: "Home", href: "home" },
-    { items: "About", href: "about" },
-    { items: "Tech Stack", href: "tech-stack" },
-    { items: "Projects", href: "projects" },
-    { items: "Contact", href: "contact" }
-];
-
 export const Menu: React.FC = () => {
-
     return (
-        <S.MenuList>
+        <S.MenuList role="navigation">
             {menuItems.map((item, index) => (
                 <S.MenuListItem key={index}>
                     <S.MenuLink
@@ -22,6 +15,7 @@ export const Menu: React.FC = () => {
                         smooth={true}
                         spy={true}
                         offset={-50}
+                        aria-label={item.items}
                     >
                         {item.items}
                     </S.MenuLink>

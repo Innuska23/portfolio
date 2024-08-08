@@ -17,7 +17,7 @@ const DesktopMenu = styled.nav`
     padding-bottom: 25px;
 `
 
-const SocialIconContainer = styled.div`
+const SocialIconContainer = styled.ul`
     display: flex;
     align-items: center;
     gap: 20px;
