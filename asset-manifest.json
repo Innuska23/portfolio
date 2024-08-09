@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.31d6cfe0.css",
+    "main.js": "/portfolio/static/js/main.c4edfb5a.js",
+    "static/js/787.6658d8b7.chunk.js": "/portfolio/static/js/787.6658d8b7.chunk.js",
+    "static/media/photo.webp": "/portfolio/static/media/photo.f8303f34da5036249591.webp",
+    "static/media/ape_nft.webp": "/portfolio/static/media/ape_nft.818a2db9c3d4d3d8b329.webp",
+    "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.d389f5a36b66f2d2b7e69873b5563aa7.svg",
+    "static/media/medicine_delivery_app.webp": "/portfolio/static/media/medicine_delivery_app.afb5b66b655e6214f4f6.webp",
+    "static/media/events_reg_app.webp": "/portfolio/static/media/events_reg_app.9eab0ab215e9664525df.webp",
+    "static/media/task_pro.webp": "/portfolio/static/media/task_pro.3149e71dbbe7f5531416.webp",
+    "static/media/dayry_app.webp": "/portfolio/static/media/dayry_app.90dd5819bd09bbdcf4f4.webp",
+    "static/media/drawing.webp": "/portfolio/static/media/drawing.0635bf6e000408fff298.webp",
+    "static/media/abstract.webp": "/portfolio/static/media/abstract.0043d81998d094b1917e.webp",
+    "static/media/phonebook.webp": "/portfolio/static/media/phonebook.ee788a79cedab362c0fc.webp",
+    "index.html": "/portfolio/index.html",
+    "main.c4edfb5a.js.map": "/portfolio/static/js/main.c4edfb5a.js.map",
+    "787.6658d8b7.chunk.js.map": "/portfolio/static/js/787.6658d8b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.c4edfb5a.js"
+  ]
+}
