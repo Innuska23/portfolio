@@ -4,6 +4,7 @@ import { theme } from "../../styles/Theme.styled";
 
 const PersonalItem = styled.div`
   max-width: 710px;
+  width: 100%;
   padding: 0 8px;
   position: relative;
   z-index: 0;
@@ -25,13 +26,14 @@ const PersonalBoxContainer = styled.div`
   align-items: baseline;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const InfoTitle = styled.h3`
   ${font({
   weight: 400,
   Fmax: 20,
-  Fmin: 14,
+  Fmin: 12,
   lineHeight: "140%",
   letterSpacing: "0.05em",
   color: `${theme.colors.secondaryText}`,
@@ -44,7 +46,7 @@ const InfoBadge = styled.span`
   Fmax: 9,
   Fmin: 6,
   lineHeight: "289%",
-  color: "#018c0f",
+  color: `${theme.colors.badge}`,
 })}
 
   text-align: center;
@@ -70,7 +72,6 @@ const PersonalDetails = styled.div`
   max-width: 710px;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 4px; */
   gap: 10px;
 
   @media ${theme.media.mobile} {
@@ -96,7 +97,6 @@ const LocationWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  /* margin-left: 40px;  */
 
   @media ${theme.media.mobile} {
     display: none;

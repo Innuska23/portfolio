@@ -6,33 +6,38 @@ import { Fade } from "react-awesome-reveal";
 
 import { contactData, menuItems } from "../../components/data/data";
 
-import { S } from "./Footer_Styles"
+import { S } from "./Footer_Styles";
 
 export const Footer: React.FC = () => {
     return (
         <S.Footer aria-label="Footer">
             <Container>
                 <S.Wrapper></S.Wrapper>
-                <FlexContainer justify={'space-between'} align={"center"} wrap={"wrap"}>
+                <FlexContainer justify="space-between" align="center" wrap="wrap">
                     <Logo />
-                    <S.SocialContactsItemList>
-                        {contactData.map((contact, index) => (
-                            <S.SocialContactsItem key={index}>
-                                <S.SocialLink href={`#${contact.href}`} aria-label={`Contact via ${contact.text}`}>{contact.text}</S.SocialLink>
-                            </S.SocialContactsItem>
-                        ))
-                        }
+
+                    <S.LinkContainer>
+                        <S.SocialContactsItemList>
+                            {contactData.map((contact, index) => (
+                                <S.SocialContactsItem key={index}>
+                                    <S.SocialLink href={`#${contact.href}`} aria-label={`Contact via ${contact.text}`}>
+                                        {contact.text}
+                                    </S.SocialLink>
+                                </S.SocialContactsItem>
+                            ))}
+                        </S.SocialContactsItemList>
+
                         <S.SocialIconContainer>
-                            <SocialIcon color={"#42446E"} hoverColor={"#666"} aria-label="Social media links" />
+                            <SocialIcon color="#42446E" hoverColor="#666" aria-label="Social media links" />
                         </S.SocialIconContainer>
-                    </S.SocialContactsItemList>
+                    </S.LinkContainer>
                 </FlexContainer>
 
                 <FlexContainer
-                    justify={'space-between'}
-                    align={"center"}
-                    wrap={"wrap"}
-                    padding={"0 15px"}>
+                    justify="space-between"
+                    align="center"
+                    wrap="wrap"
+                    padding="0 15px">
                     <S.NavigationList role="navigation" aria-label="Footer navigation">
                         {menuItems.map((item, index) => (
                             <S.NavigationFooterItem key={index}>
@@ -40,10 +45,13 @@ export const Footer: React.FC = () => {
                                     to={item.href}
                                     smooth={true}
                                     spy={true}
-                                    aria-label={`Navigate to ${item.items} section`}>{item.items}</S.NavigationFooterLink>
+                                    aria-label={`Navigate to ${item.items} section`}>
+                                    {item.items}
+                                </S.NavigationFooterLink>
                             </S.NavigationFooterItem>
                         ))}
                     </S.NavigationList>
+
                     <S.Copyright aria-label="Copyright information">
                         Developed by <S.CopyrightSpan>Inna Dmytrenko</S.CopyrightSpan> with{" "}
                         <Fade>
@@ -51,8 +59,10 @@ export const Footer: React.FC = () => {
                         </Fade>
                         & <S.CopyrightSpan>Coffee</S.CopyrightSpan>
                     </S.Copyright>
+
                 </FlexContainer>
             </Container>
         </S.Footer>
     );
 };
+

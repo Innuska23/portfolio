@@ -1,9 +1,9 @@
-import prog1 from '../../assets/images/proj-1.webp'
-import prog2 from '../../assets/images/proj-2.webp'
-import prog3 from '../../assets/images/proj-3.webp'
-import prog4 from '../../assets/images/proj-4.webp'
-import prog5 from '../../assets/images/proj-5.webp'
-import prog6 from '../../assets/images/proj-6.webp'
+import prog1 from '../../assets/images/events_reg_app.webp'
+import prog2 from '../../assets/images/ape_nft.webp'
+import prog3 from '../../assets/images/medicine_delivery_app.webp'
+import prog4 from '../../assets/images/task_pro.webp'
+import prog5 from '../../assets/images/dayry_app.webp'
+import prog6 from '../../assets/images/phonebook.webp'
 
 export const personalDate = [
   {
@@ -19,7 +19,7 @@ export const educationDate = [
   {
     placeName: "Teiva Systems",
     title: "ServiceNow Rocket Course 3.0",
-    date: "Nov 2022 - Sep 2023",
+    date: "Oct 2023 - Jan 2024",
   },
   {
     placeName: "IT School GoIT",
@@ -27,9 +27,9 @@ export const educationDate = [
     date: "Nov 2022 - Sep 2023",
   },
   {
-    placeName: "National Aerospace University – Kharkiv Aviation Institute",
-    badge: "Full Time",
+    placeName: "National Aerospace University – KhAI",
     title: "Master's degree in Accounting and taxation",
+    badge: "Full Time",
     date: "Sep 2015 - Dec 2020",
   },
 ];
@@ -49,40 +49,58 @@ export const menuItems = [
 
 export const projectDate = [
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog1
+    title: 'Events Registration',
+    text: "Events registration project is a full-stack application that handles both user interactions on the front end and data processing on the back end.",
+    stack: "HTML , JavaScript, CSS, React, Express.js, MongoDB",
+    src: prog1,
+    linkPreview: "https://events-registration-app-1.onrender.com/",
+    linkCode: "https://github.com/Innuska23/events-registration-app",
+    alt: "project Events Registration"
   },
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog2
+    title: 'Ape-NFT',
+    text: "Landing page. The APE NFT application consists of 8 sections: header, hero, about, mind map, faq, arts, contact us and footer",
+    stack: "HTML , JavaScript, Tailwind, React",
+    src: prog2,
+    linkPreview: "https://innuska23.github.io/Ape-NFT/",
+    linkCode: "https://github.com/Innuska23/Ape-NFT",
+    alt: "project Ape-NFT"
   },
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog3
+    title: 'Medicine Delivery App',
+    text: "The Medicine Delivery app should consist of two pages: the shops page, the shopping cart page.",
+    stack: "HTML , JavaScript, SASS, React, Redux.js, Express.js, MongoDB",
+    src: prog3,
+    linkPreview: "https://innuska23.github.io/medicine-delivery-app/shop/",
+    linkCode: "https://github.com/Innuska23/medicine-delivery-app",
+    alt: "project Medicine Delivery App"
   },
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog4
+    title: 'BackEnd TaskPro',
+    text: "Creating API endpoints: getting and saving data of boards, columns and cards and configuring the Need Help route.",
+    stack: "MongoDB, Cloudinary, Swagger API, Node.js",
+    src: prog4,
+    linkPreview: "https://taskpro-backend-zulp.onrender.com/api-docs/",
+    linkCode: "https://github.com/klav28/GoIT-FS-Backend",
+    alt: "project BackEnd TaskPro"
   },
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog5
+    title: 'Dayry App',
+    text: "The Dayry App is a modern web application designed to help users track their daily tasks and activities efficiently.",
+    stack: "HTML , JavaScript, SASS, React, Redux.js",
+    src: prog5,
+    linkPreview: "https://innuska23.github.io/test-task-blynk/",
+    linkCode: "https://github.com/Innuska23/test-task-blynk",
+    alt: "project Dayry App"
   },
   {
-    title: 'Project Tile goes here',
-    text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    stack: "HTML , JavaScript, SASS, React",
-    src: prog6
+    title: 'Phonebook',
+    text: "This application allows users to efficiently save and create contacts, providing a user-friendly interface for managing personal or professional contact information.",
+    stack: "React, Redux, REST API, MERN, Node.js",
+    src: prog6,
+    linkPreview: "https://innuska23.github.io/goit-react-hw-08-phonebook",
+    linkCode: "https://github.com/Innuska23/goit-react-hw-08-phonebook",
+    alt: "project Phonebook"
   }
 
 ]

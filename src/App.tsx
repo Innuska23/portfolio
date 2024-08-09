@@ -1,6 +1,5 @@
 import './App.css';
 import { GoToTop } from './components/goTopBtn/GoTopBtn';
-import { Particle } from './components/particle/Particle';
 import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { About } from './layout/sections/about/About';
@@ -9,12 +8,9 @@ import { Home } from './layout/sections/home/Home';
 import { Projects } from './layout/sections/projects/Projects';
 import { Skills } from './layout/sections/skills/Skills';
 
-
-
 function App() {
     return (
         <div className="App">
-            <Particle />
             <Header />
             <Home />
             <About />

@@ -1,4 +1,5 @@
 import React from "react"
+
 import { UserExperience } from "../../../components/workExperience/WorkExperience"
 import { SectionTitle } from "../../../components/SectionTitle"
 import { Container } from "../../../components/Container"
@@ -11,6 +12,7 @@ export const About: React.FC = () => {
         <S.About id="about">
             <Container>
                 <FlexContainer wrap="wrap">
+
                     <S.AboutBox>
                         <SectionTitle
                             text={"start"}
@@ -23,8 +25,11 @@ export const About: React.FC = () => {
                             delivering high-quality web solutions that meet user
                             expectations and adhere to industry best practices
                         </S.AboutMeText>
+
                         <UserExperience />
+
                     </S.AboutBox>
+
                 </FlexContainer>
             </Container>
         </S.About>

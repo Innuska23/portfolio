@@ -15,6 +15,7 @@ export const Projects: React.FC = () => {
                     lineH={"54%"}
                     font={"48px"}>Projects</SectionTitle>
                 <SectionParagraph>Things I’ve built so far</SectionParagraph>
+
                 <S.ProjectsGrid >
                     {projectDate.map((project, index) => (
                         <Project
@@ -22,9 +23,13 @@ export const Projects: React.FC = () => {
                             title={project.title}
                             text={project.text}
                             stack={project.stack}
-                            src={project.src} />
+                            src={project.src}
+                            linkCode={project.linkCode}
+                            linkPreview={project.linkPreview}
+                            alt={project.alt} />
                     ))}
                 </S.ProjectsGrid >
+
             </Container>
         </S.Project>
     )

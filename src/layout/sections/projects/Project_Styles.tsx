@@ -2,8 +2,6 @@ import styled from "styled-components"
 import { theme } from "../../../styles/Theme.styled"
 
 const Project = styled.section`
-    position: relative;
-    z-index: 100;
 `
 
 const ProjectsGrid = styled.div`
