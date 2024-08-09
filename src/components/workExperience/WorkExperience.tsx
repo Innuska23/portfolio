@@ -1,6 +1,5 @@
 import { SectionTitle } from "../SectionTitle"
 import { educationDate, personalDate } from "../data/data";
-
 import { PersonalInfo } from "../personalInfo/PersonalInfo";
 
 import { S } from "./WorkExperience_Styles"

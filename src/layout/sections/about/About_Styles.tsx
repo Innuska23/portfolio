@@ -38,8 +38,6 @@ const AboutBox = styled.div`
     @media ${theme.media.mobile}{
         gap: 15px;
     }
-
-
 `
 
 const AboutMeText = styled.p`
@@ -51,7 +49,8 @@ const AboutMeText = styled.p`
     color: `${theme.colors.secondaryText}`,
     letterSpacing: "0em"
 })}
-    text-indent: 20px;
+    text-indent: 25px;
+    width: 100%;
 `
 export const S = {
     About,

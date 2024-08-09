@@ -31,6 +31,7 @@ export const PersonalInfo: React.FC<PersonalInfoPropsType> = ({ title, badge, pl
           </S.LocationWrapper>
         )}
       </S.PersonalSmallBox>
+
       <S.PersonalSmallBox>
         <Icon iconId="date" height="12px" width="16px" viewBox="0 0 12 16" />
         <span>{date}</span>

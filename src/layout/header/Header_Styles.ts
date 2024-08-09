@@ -8,7 +8,9 @@ const Header = styled.header<{ scrolled: boolean }>`
     left: 0;
     right: 0;
     z-index: 99999;
-    background-color: ${props => props.scrolled ? '#c2c2c2e3' : '#FFFFFF'};
+    background-color: ${props => props.scrolled ? `${theme.colors.grayBg}` : `${theme.colors.primaryBg}`};
+    transition: ${theme.animations.transition};
+    
     @media ${theme.media.tablet} {
         padding: 25px 0;
     }

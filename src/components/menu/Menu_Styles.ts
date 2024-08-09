@@ -18,9 +18,9 @@ const MenuList = styled.ul`
     }
 
     @media (max-width: 900px) {
-        justify-content: flex-start;
-        gap: 10px;
-        margin-right: 0px;
+        justify-content: flex-end;
+        gap: 25px;
+        margin-right: 25px;
     }
 
     @media ${theme.media.tablet} {

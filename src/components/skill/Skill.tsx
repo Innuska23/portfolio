@@ -8,7 +8,8 @@ import { S } from "./Skill_Styles"
 export const Skill: React.FC = () => {
     return (
         <S.Skill>
-            <Fade cascade={true}
+            <Fade
+                cascade={true}
                 damping={0.2}>
                 {skillData.map((skill, index) => (
                     <Icon

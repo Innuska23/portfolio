@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Theme.styled";
 
-
 const Skill = styled.div`
     display: grid;
     gap: 81px 103px;

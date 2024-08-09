@@ -5,14 +5,15 @@ import { font } from "../../../styles/Common";
 import photoBg from "../../../assets/images/abstract.webp";
 
 const waveAnimation = keyframes`
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(16deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(16deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(18deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 `;
 
 const Main = styled.section`
@@ -25,32 +26,22 @@ const Main = styled.section`
     }
 `;
 
-// const HomeContainer = styled.div`
-// display: flex;
-// flex-wrap: wrap;
-// height: 100%;
-// align-items: center;
-// justify-content: space-between;
-// padding: 45px 0 0 0;
-
-// @media ${theme.media.tablet}{
-//     justify-content: center;
-//     align-items: center;
-//     gap: 50px;
-// }
-// `
-
 const About = styled.div`
     ${font({
     weight: 700,
     Fmax: 58,
-    Fmin: 32,
+    Fmin: 26,
     lineHeight: "121%",
 })}
     @media (max-width: 900px) {
-        margin-bottom: 30px;
+        margin-bottom: 30px;       
+        max-width: 770px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
 `;
 
 const Greeting = styled.p`
@@ -59,8 +50,9 @@ const Greeting = styled.p`
 
 const WavingHand = styled.span`
 display: inline-block;
-animation: ${waveAnimation} 3.0s infinite;
+animation: ${waveAnimation} 1.0s infinite;
 transform-origin: 75% 75%;
+animation-timing-function: ease-in-out;
 `;
 
 const Description = styled.p`
@@ -89,6 +81,11 @@ const PhotoWrapper = styled.div`
     background: ${theme.colors.gradient};
     border-radius: 230px;
     padding: 5px;
+
+    @media (max-width: 900px) {
+    left: 50%;
+    transform: translateX(-50%);
+    }
 
     &::after {
     content: "";
@@ -122,7 +119,6 @@ const Photo = styled.img`
 
 export const S = {
     Main,
-    // HomeContainer,
     About,
     Description,
     IntroText,

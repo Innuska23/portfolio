@@ -3,13 +3,19 @@ import { theme } from "../../styles/Theme.styled"
 import { font } from "../../styles/Common"
 
 const Project = styled.div`
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: ${theme.colors.shadow};
+    background: ${theme.colors.primaryBg};
     border-radius: 20px;
     max-width: 375px;
+    min-height: 575px;
+    height: 100%;
     flex-grow: 1;
     letter-spacing: 0em;
+    justify-content: space-between;
     transition: ${theme.animations.transition};
+    text-align: justify;
     
     &:hover {
     transform: scale(1.1);
@@ -25,10 +31,16 @@ const ImageLink = styled.a`
 const Image = styled.img`
     border-radius: 20px 20px 0 0;
     width: 100%;
+    height: 265px;
     object-fit: cover;
 `
+
 const BoxText = styled.div`
     padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 
     @media ${theme.media.mobile} {
         padding: 20px 25px;
@@ -56,6 +68,8 @@ const Text = styled.p`
     letterSpacing: "0em",
 })}
     margin-top: 18px;
+    text-indent: 25px;
+    flex-grow: 1;
 
     @media ${theme.media.mobile} {
         margin-top: 15px;
@@ -69,7 +83,7 @@ const Stack = styled.p`
     Fmin: 14,
     letterSpacing: "0em",
 })}
-    margin-top: 12px;
+    margin-bottom: 15px;
 
     @media ${theme.media.mobile} {
         margin-top: 10px;
@@ -91,9 +105,11 @@ const ButtonContainer = styled.div`
     gap: 55px;
     margin-top: 21px;
     align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
 
     @media ${theme.media.mobile} {
-        margin-top: 15px;
+        margin-top: auto;
     }
 `
 

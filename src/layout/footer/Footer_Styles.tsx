@@ -1,6 +1,8 @@
 import styled from "styled-components";
+
 import { theme } from "../../styles/Theme.styled";
 import { font } from "../../styles/Common";
+
 import { Link } from "react-scroll";
 
 const Footer = styled.footer`
@@ -19,39 +21,41 @@ const Wrapper = styled.div`
     z-index: 0;
     padding-top: 23px;
 
-
     @media ${theme.media.tablet} {
         padding-top: 0px;
     }
     
-        &::after {
-            content: "";
-            width: 100%; 
-            height: 2px;
-            opacity: 0.3;
-            background-color: ${theme.colors.secondaryText};
-    
-            position: absolute;
-            top: 120px;
-            right: 0px;
-            z-index: 2;
-        }
+    &::after {
+        content: "";
+        width: 100%; 
+        height: 2px;
+        opacity: 0.3;
+        background-color: ${theme.colors.secondaryText};
+        position: absolute;
+        top: 120px;
+        right: 0px;
+        z-index: 2;
+    }
 `;
-
 
 const SocialContactsItemList = styled.ul`
     display: flex;
     gap: 90px;
     align-items: center;
 
-    @media ${theme.media.tablet}{
+    @media ${theme.media.tablet} {
         gap: 15px;
         flex-direction: column; 
         align-items: center;
     }
 `;
 
-const SocialContactsItem = styled.li``;
+const SocialContactsItem = styled.li`
+    :hover {
+        transition: ${theme.animations.transition};
+        transform: scale(1.1);
+    }
+`;
 
 const SocialLink = styled.a`
     ${font({
@@ -64,23 +68,22 @@ const SocialLink = styled.a`
 })}
     transition: ${theme.animations.transition};
 
-    :hover{
-    color: ${theme.colors.secondaryText};
-    text-decoration: underline;
-    transition: ${theme.animations.transition};
+    :hover {
+        color: ${theme.colors.secondaryText};
+        text-decoration: underline;
+        transition: ${theme.animations.transition};
     }
-    `;
-
+`;
 
 const SocialIconContainer = styled.div`
     display: flex;
     gap: 20px;
     margin-right: 15px;
 
-    @media ${theme.media.tablet}{
+    @media ${theme.media.tablet} {
         align-items: center;
     }
-`
+`;
 
 const NavigationList = styled.ul`
     ${font({
@@ -131,16 +134,16 @@ const CopyrightHeart = styled.span`
     margin: 0 5px;
 
     @keyframes pulse {
-    0% {
-        transform: scale(1);
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 `;
 
 const CopyrightSpan = styled.span`
@@ -152,23 +155,37 @@ const CopyrightSpan = styled.span`
 `;
 
 const NavigationFooterItem = styled.li`
-
-    `
+    :hover {
+        transition: ${theme.animations.transition};
+        transform: scale(1.1);
+    }`;
 
 const NavigationFooterLink = styled(Link)`
-cursor: pointer;
+    cursor: pointer;
     ${font({
     color: `${theme.colors.primaryText}`
-})
+})}
+    transition: ${theme.animations.transition};
+    
+    :hover {
+        ${font({
+    color: `${theme.colors.secondaryText}`
+})}
+        text-decoration: underline;
+        transition: ${theme.animations.transition};
+        transform: scale(1.1)
     }
-transition: ${theme.animations.transition};
-    :hover{
-    ${font({
-        color: `${theme.colors.secondaryText}`
-    })
+`;
+
+const LinkContainer = styled.div`
+    display: flex;
+    gap: 50px;
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
     }
-    transition: ${theme.animations.transition};;
-}
 `
 
 export const S = {
@@ -183,5 +200,6 @@ export const S = {
     CopyrightHeart,
     CopyrightSpan,
     NavigationFooterItem,
-    NavigationFooterLink
-}
+    NavigationFooterLink,
+    LinkContainer
+};
